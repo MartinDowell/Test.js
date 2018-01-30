@@ -1,0 +1,36 @@
+body  {
+  background-color: rgb(88, 111, 88);
+
+}
+
+h2  {
+font-family: percival;
+
+}
+
+form  {
+  font-family: arial;
+  font-size: 18px;
+
+}
+
+button  {
+  font-family: arial;
+  font-size: 18px;
+}
+
+table  {
+  font-family: arial;
+  font-size: 18px;
+  width: 50%;
+
+}
+
+th  {
+  background-color: green;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+}

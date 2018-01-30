@@ -1,0 +1,76 @@
+.banner  {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  color: green;
+  text-align: center;
+}
+
+
+.sidebar  {
+  border: 3px solid green;
+  background-color: lightgreen;
+  max-width: 22%;
+  height: 250px;
+  max-width: 250px;
+  position: absolute;
+  left: 50px;
+}
+
+.sidebar h3  {
+  font-family: arial;
+  font-size: 22px;
+  color: forestgreen;
+  text-align: center;
+
+}
+
+.sidebar .sidebar-nav  {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  color: forestgreen;
+  text-align: top;
+  padding-right: 15px;
+}
+
+.welcome-txt  {
+  font-size: 22px;
+  max-width: 30%;
+  padding: 0px;
+  margin-left: 15%;
+}
+
+p  {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  color: white;
+  text-align: left;
+}
+
+table  {
+  width: 50%;
+  position: absolute;
+  right: 50px;
+  table-layout: fixed;
+  top: 225px;
+}
+
+th  {
+  height: 50px;
+  background-color: #888800;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  color: white;
+  border: 2px solid yellow;
+  text-align: center;
+}
+
+td  {
+  height: 100%;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  color: white;
+  border: 2px solid yellow;
+  text-align: center;
+  padding: 0px;
+}

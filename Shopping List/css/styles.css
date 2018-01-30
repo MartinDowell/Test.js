@@ -1,0 +1,53 @@
+body  {
+  background-color: rgb(222, 188, 111);
+}
+
+
+h1  {
+  font-family: arial;
+  color: blue;
+}
+
+form {
+    display: inline-block;
+    font-weight: bold;
+}
+
+#button  {
+display: inline-block;
+font-family: georgia;
+font-weight: bold;
+text-align: center;
+color: black;
+width: 150px;
+height: 20px;
+background-color: rgb(111, 222, 111);
+border: 2px solid black;
+border-radius: 5px;
+}
+
+#remove  {
+display: inline-block;
+font-family: georgia;
+font-weight: bold;
+text-align: center;
+color: black;
+width: 100px;
+height: 20px;
+background-color: rgb(222, 111, 111);
+border: 2px solid black;
+border-radius: 5px;
+}
+
+#button:hover, #remove:hover  {
+    background-color: yellow;
+}
+
+ol {
+	font-family:garamond;
+	color: #eeeeee;
+  width: 150px;
+  height: auto;
+  background-color: rgb(55, 55, 55);
+  opacity: 0.5;
+}

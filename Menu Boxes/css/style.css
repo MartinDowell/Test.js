@@ -1,0 +1,96 @@
+body  {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.menu  {
+  background-color: rgba(255, 0, 0, 0.5);
+  border: red solid 5px;
+  font-family: Gabriela;
+  font-size: 1.5em;
+  color: white;
+  width: 35em;
+  height: 3em;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.menu #products  {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.menu #shop  {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+}
+
+.menu #community  {
+  position: absolute;
+  top: 50px;
+  left: 450px;
+}
+
+.menu #support  {
+  position: absolute;
+  top: 50px;
+  left: 700px;
+}
+
+.highlight  {
+  font-size: 120%;
+  color: yellow;
+}
+
+.products-cat  {
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: Gabriela;
+  font-size: 1.25em;
+  position: absolute;
+  top: 125px;
+  left: 100px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.shop-cat  {
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: Gabriela;
+  font-size: 1.25em;
+  position: absolute;
+  top: 125px;
+  left: 300px;
+  padding: 10px;
+}
+
+.community-cat  {
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: Gabriela;
+  font-size: 1.25em;
+  position: absolute;
+  top: 125px;
+  left: 450px;
+  padding: 10px;
+}
+
+.support-cat  {
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: Gabriela;
+  font-size: 1.25em;
+  position: absolute;
+  top: 125px;
+  left: 700px;
+  padding: 10px;
+}

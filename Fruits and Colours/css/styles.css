@@ -1,0 +1,74 @@
+body  {
+  background-color: rgb(222, 222, 188);
+}
+
+h1 {
+  font-family: arial;
+  color: blue;
+  text-align: center;
+}
+
+.fruits  {
+  font-family: arial;
+  font-style: bold;
+  color: black;
+  background-color: orange;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+  padding-top: 35px;
+  border: 2px solid red;
+  position: relative;
+  margin: 0px auto;
+}
+
+.FF  {
+  font-family: geneva;
+  font-size: 28px;
+  colour: grey;
+  position: relative;
+  text-align: left;
+  top: 0px;
+  left: 900px;
+}
+
+.colours  {
+  font-family: arial;
+  font-style: bold;
+  color: black;
+  background-color: yellow;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  border: 2px solid red;
+  position: relative;
+  top: 100px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+}
+
+.button-pressed  {
+  font-family: arial;
+  font-style: bold;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  border: 2px solid red;
+  position: relative;
+  margin: 0px auto;
+}
+
+.spectrum  {
+  font-family: geneva;
+  font-size: 28px;
+  colour: grey;
+  position: relative;
+  text-align: left;
+  top: 100px;
+  left: 900px;
+
+}

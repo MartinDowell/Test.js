@@ -1,0 +1,73 @@
+body  {
+  background-color: rgb(222, 222, 222);
+}
+
+
+#red  {
+  background-color: rgb(222, 0, 0);
+  font-family: arial;
+  font-size: 2em;
+  text-align: center;
+  grid-column: 1 / 7;
+  grid-row: 1 / 2;
+}
+
+#green  {
+  background-color: rgb(0, 222, 0);
+  font-family: arial;
+  font-size: 2em;
+  text-align: center;
+  grid-column: 7 / 13;
+  grid-row: 1 / 2;
+}
+
+#blue  {
+  background-color: rgb(0, 0, 222);
+  font-family: arial;
+  font-size: 2em;
+  text-align: center;
+  grid-column: 4 / 11;
+  grid-row: 2 / 3;
+}
+
+#magenta  {
+  background-color: rgb(222, 0, 222);
+  font-family: arial;
+  font-size: 2em;
+  text-align: center;
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+}
+
+#yellow  {
+  background-color: rgb(222, 222, 0);
+  font-family: arial;
+  font-size: 2em;
+  text-align: center;
+  grid-column: 5 / 8;
+  grid-row: 3 / 4;
+}
+
+#cyan  {
+  background-color: rgb(0, 222, 222);
+  font-family: arial;
+  font-size: 2em;
+  text-align: center;
+  grid-column: 8 / 13;
+  grid-row: 3 / 4;
+}
+
+.box  {
+
+  height: 150px;
+  border: 3px solid black;
+}
+
+.theGrid  {
+  display: grid;
+  width: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  grid-template-rows: repeat(3, 1fr);
+
+}
