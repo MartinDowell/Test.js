@@ -27,5 +27,5 @@ arr.push(thomas);
 arr.push(william);
 arr.push(joseph);
 var splat = arr.map(birth);
-console.log(splat);
-console.log(average(splat));
+console.log('The ages are: ' + splat);
+console.log('The average age is: ' + average(splat));
