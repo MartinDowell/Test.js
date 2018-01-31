@@ -27,5 +27,6 @@ arr.push(thomas);
 arr.push(william);
 arr.push(joseph);
 var splat = arr.map(birth);
+//splat is temporary variable
 console.log('The ages are: ' + splat);
 console.log('The average age is: ' + average(splat));
