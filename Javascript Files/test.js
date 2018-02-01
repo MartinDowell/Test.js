@@ -25,20 +25,19 @@ function average(arr)  {
 var thomas = new Person('Thomas', 1810, 1873);
 var william = new Person('William', 1753, 1811);
 var joseph = new Person('Joseph', 1725, 1761);
-//var james = new Person('James', 1888, 1951);
-//var richard = new Person('Richard', 1866, 1922);
+var james = new Person('James', 1888, 1951);
+var richard = new Person('Richard', 1866, 1922);
 
 thomas.birthplace = 'Mancetter';
 
 arr.push(thomas);
 arr.push(william);
 arr.push(joseph);
-//arr.push(james);
-//arr.push(richard);
+arr.push(james);
+arr.push(richard);
 
 var splat = arr.map(ages);
 var splat2 = arr.map(birth);
-//With more entries added
 
 console.log('The ages are: ' + splat);
 console.log('The average age is: ' + average(splat));
