@@ -4,18 +4,22 @@ var Vector = function (x, y)  {
   this.y = y;
 }
 
-var a = new Vector(6, 8);
+var a = new Vector(3, 4);
 console.log(a);
 Vector.prototype.plus = function(b)  {
   return new Vector((this.x + b.x), (this.y + b.y));
 }
 
-//Vector.prototype.minus = function()  {
+Vector.prototype.minus = function(b)  {
+  return new Vector((this.x - b.x), (this.y - b.y));
+}
 
-//}
+Vector.prototype.length = function()  {
+  return (Math.sqrt((Math.pow(this.x, 2) + Math.pow(this.y, 2))));
+}
 
-var b = new Vector(5, 6);
+var b = new Vector(7, 24);
 console.log(b);
 
-var vec = a.plus(b);
+var vec = b.length();
 console.log(vec);
