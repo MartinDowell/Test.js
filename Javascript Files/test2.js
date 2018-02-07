@@ -16,10 +16,7 @@ fruit[5].name = 'banana';
 fruit[5].colour = 'yellow';
 
 function names(f)  {
-  if (f.colour == 'yellow')  {
-    return f;
-  }
+  return f.name;
 }
 
-fruit[3].name = 'pear';
-console.log(fruit[3].name);
+console.log(fruit.map(names));
