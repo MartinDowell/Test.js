@@ -20,10 +20,14 @@ function average(ht)  {
 }
 
 function h2n(m)  {
-  if (m.height == maxHt(mountains.map(height)))
-  console.log(m.name);
-  return m.name;
+  if (m.height == maxHt(mountains.map(height)))  {
+    return m.name;
+  }
 }
 
-console.log('Average height of mountains: ' + average(mountains.map(height)));
-console.log('Highest mountain is: ' + maxHt(mountains.map(height)) + ' which is ' + mountains.reduce(h2n));
+function empty(n)  {
+  return n != undefined;
+}
+
+console.log('Average height of mountains: ' + average(mountains.map(height)) + 'm');
+console.log('Highest mountain is at: ' + maxHt(mountains.map(height)) + 'm' + ' which is ' + (mountains.map(h2n)).filter(empty));
