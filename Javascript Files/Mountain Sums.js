@@ -29,5 +29,5 @@ function empty(n)  {
   return n != undefined;
 }
 
-console.log('Average height of mountains: ' + average(mountains.map(height)) + 'm');
-console.log('Highest mountain is at: ' + maxHt(mountains.map(height)) + 'm' + ' which is ' + (mountains.map(h2n)).filter(empty));
+console.log('Average height of mountains: ' + average(mountains.map(height)) + ' metres.');
+console.log('Highest mountain is ' + (mountains.map(h2n)).filter(empty) + ' which is ' + maxHt(mountains.map(height)) + ' metres high.');
