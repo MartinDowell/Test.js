@@ -1,0 +1,22 @@
+body  {
+  background: 'images/stormy_sky_by_eltear_stock-d3olpvt.jpg';
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header  {
+  font-family: Bellefair;
+  font-size: 150px;
+  color: white;
+  text-align: center;
+}
+
+button  {
+  font-size: 50px;
+
+}
+
+#test  {
+  font-size: 40px;
+
+}
