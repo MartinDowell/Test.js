@@ -20,17 +20,16 @@ body  {
   height: 200px;
   width: 100%;
   border: solid 2px white;
-  position: relative;
-  font-size: 60px;
+  font-size: 50px;
   color: white;
-  font-family: Bellefair
+  display: flex;
+  justify-content: space-around;
 }
 
 #location  {
   background-color: blue;
   width: 25%;
   height: 200px;
-  position: absolute;
   text-align: center;
   padding-top: 70px;
 }
@@ -39,18 +38,14 @@ body  {
   background-color: blue;
   width: 25%;
   height: 200px;
-  position: absolute;
-  margin-left: 700px;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 10px;
 }
 
 #current  {
   background-color: blue;
   width: 25%;
   height: 200px;
-  position: absolute;
-  margin-left: 1420px;
   text-align: center;
   padding-top: 70px;
 }
@@ -63,65 +58,60 @@ body  {
   top: 50px;
   font-size: 60px;
   color: white;
-  font-family: Bellefair
+  display: flex;
+  justify-content: space-around;
 }
 
 #today  {
   background-color: blue;
+  border-radius: 22px;
   width: 15%;
   height: 200px;
-  position: absolute;
-  left: 0px;
   text-align: center;
   padding-top: 70px;
 }
 
 #day1  {
   background-color: blue;
+  border-radius: 22px;
   width: 15%;
   height: 200px;
-  position: absolute;
-  left: 300px;
   text-align: center;
   padding-top: 70px;
 }
 
 #day2  {
   background-color: blue;
+  border-radius: 22px;
   width: 15%;
   height: 200px;
-  position: absolute;
-  left: 600px;
   text-align: center;
   padding-top: 70px;
 }
 
 #day3  {
   background-color: blue;
+  border-radius: 22px;
   width: 15%;
   height: 200px;
-  position: absolute;
-  left: 900px;
   text-align: center;
   padding-top: 70px;
 }
 
 #day4  {
   background-color: blue;
+  border-radius: 22px;
   width: 15%;
   height: 200px;
-  position: absolute;
-  left: 1200px;
   text-align: center;
   padding-top: 70px;
 }
 
 #day5  {
   background-color: blue;
+  border-radius: 22px;
   width: 15%;
   height: 200px;
-  position: absolute;
-  right: 0px;
   text-align: center;
   padding-top: 70px;
 }
