@@ -35,7 +35,8 @@ $(document).ready(function() {
 
 // Get next 5 days forecastday
     for (i = 1; i <= 5; i++)  {
-      document.getElementById('day'+i).innerHTML = jsonDoc.forecast.forecastday[i].day.condition.text + "<br>"
+      document.getElementById('day'+i).innerHTML
+        = jsonDoc.forecast.forecastday[i].day.condition.text + "<br>"
         + jsonDoc.forecast.forecastday[i].day.maxtemp_c + "<br>"
         + jsonDoc.forecast.forecastday[i].day.mintemp_c;
       }
