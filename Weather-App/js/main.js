@@ -28,15 +28,26 @@ $(document).ready(function() {
     var monthN = months[month - 1];
     document.getElementById('datetime').innerHTML = time +"<br>"+ day +"<br>"+ monthN;
 // Get today's overview
+    var d = new Date();
+    var n = d.getDay();
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var todayDay = days[n];
     var todayMaxT = jsonDoc.forecast.forecastday[0].day.maxtemp_c;
     var todayMinT = jsonDoc.forecast.forecastday[0].day.mintemp_c;
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
-    document.getElementById('today').innerHTML = todayCond + "<br>" + todayMaxT + "<br>" + todayMinT;
+    document.getElementById('today').innerHTML = todayDay + "<br>" +
+      todayCond + "<br>" +
+      todayMaxT + "<br>" +
+      todayMinT;
 
 // Get next 5 days forecastday
+    var d = new Date();
+    var n = d.getDay();
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     for (i = 1; i <= 5; i++)  {
       document.getElementById('day'+i).innerHTML
-        = jsonDoc.forecast.forecastday[i].day.condition.text + "<br>"
+        = days[n + i] + "<br>"
+        + jsonDoc.forecast.forecastday[i].day.condition.text + "<br>"
         + jsonDoc.forecast.forecastday[i].day.maxtemp_c + "<br>"
         + jsonDoc.forecast.forecastday[i].day.mintemp_c;
       }
