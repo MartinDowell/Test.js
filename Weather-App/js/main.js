@@ -28,10 +28,7 @@ $(document).ready(function() {
     var monthN = months[month - 1];
     document.getElementById('datetime').innerHTML = time +"<br>"+ day +"<br>"+ monthN;
 // Get today's overview
-    var d = new Date();
-    var n = d.getDay();
-    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    var todayDay = days[n];
+    var todayDay = 'TODAY';
     var todayMaxT = jsonDoc.forecast.forecastday[0].day.maxtemp_c;
     var todayMinT = jsonDoc.forecast.forecastday[0].day.mintemp_c;
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
@@ -51,6 +48,19 @@ $(document).ready(function() {
         + jsonDoc.forecast.forecastday[i].day.maxtemp_c + "<br>"
         + jsonDoc.forecast.forecastday[i].day.mintemp_c;
       }
+
+// Get stats for each day
+
+  document.getElementById('sunrise').innerHTML
+    = 'Sunrise: ' + jsonDoc.forecast.forecastday[0].astro.sunrise;
+  document.getElementById('sunset').innerHTML
+    = 'Sunset: ' + jsonDoc.forecast.forecastday[0].astro.sunset;
+  document.getElementById('windspeed').innerHTML
+    = 'Windspeed: ' + jsonDoc.forecast.forecastday[0].day.maxwind_mph + 'mph';
+  document.getElementById('visibility').innerHTML
+    = 'Visibility: ' + jsonDoc.forecast.forecastday[0].day.avgvis_miles + ' miles';
+  document.getElementById('humidity').innerHTML
+    = 'Humidity: ' + jsonDoc.forecast.forecastday[0].day.avghumidity + '%';
 
 
   };
