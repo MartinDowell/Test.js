@@ -32,7 +32,7 @@ $(document).ready(function() {
     var todayMaxT = jsonDoc.forecast.forecastday[0].day.maxtemp_c;
     var todayMinT = jsonDoc.forecast.forecastday[0].day.mintemp_c;
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
-    document.getElementById('today').innerHTML = todayDay + "<br>" +
+    document.getElementById('day0').innerHTML = todayDay + "<br>" +
       todayCond + "<br>" +
       todayMaxT + "<br>" +
       todayMinT;
@@ -49,22 +49,59 @@ $(document).ready(function() {
         + jsonDoc.forecast.forecastday[i].day.mintemp_c;
       }
 
+
 // Get stats for each day
 
-  document.getElementById('sunrise').innerHTML
-    = 'Sunrise: ' + jsonDoc.forecast.forecastday[0].astro.sunrise;
-  document.getElementById('sunset').innerHTML
-    = 'Sunset: ' + jsonDoc.forecast.forecastday[0].astro.sunset;
-  document.getElementById('windspeed').innerHTML
-    = 'Windspeed: ' + jsonDoc.forecast.forecastday[0].day.maxwind_mph + 'mph';
-  document.getElementById('visibility').innerHTML
-    = 'Visibility: ' + jsonDoc.forecast.forecastday[0].day.avgvis_miles + ' miles';
-  document.getElementById('humidity').innerHTML
-    = 'Humidity: ' + jsonDoc.forecast.forecastday[0].day.avghumidity + '%';
+$('#day0').on('click', function()  {
+  var d = 0;
+  getStats(d);
+})
 
+$('#day1').on('click', function()  {
+  var d = 1;
+  getStats(d);
+})
+
+$('#day2').on('click', function()  {
+  var d = 2;
+  getStats(d);
+})
+
+$('#day3').on('click', function()  {
+  var d = 3;
+  getStats(d);
+})
+
+$('#day4').on('click', function()  {
+  var d = 4;
+  getStats(d);
+})
+
+$('#day5').on('click', function()  {
+  var d = 5;
+  getStats(d);
+})
+
+$('#day6').on('click', function()  {
+  var d = 6;
+  getStats(d);
+})
+
+function getStats(d)  {
+  $('#day' + d).css('border', 'solid 5px red');
+  var leftPos = String(d * 330) + 'px';
+  $('.bottom-strip').css('left', leftPos);
+  document.getElementById('sunrise').innerHTML
+    = 'Sunrise: ' + jsonDoc.forecast.forecastday[d].astro.sunrise;
+  document.getElementById('sunset').innerHTML
+    = 'Sunset: ' + jsonDoc.forecast.forecastday[d].astro.sunset;
+  document.getElementById('windspeed').innerHTML
+    = 'Windspeed: ' + jsonDoc.forecast.forecastday[d].day.maxwind_mph + 'mph';
+  document.getElementById('visibility').innerHTML
+    = 'Visibility: ' + jsonDoc.forecast.forecastday[d].day.avgvis_miles + ' miles';
+  document.getElementById('humidity').innerHTML
+    = 'Humidity: ' + jsonDoc.forecast.forecastday[d].day.avghumidity + '%';
+}
 
   };
-
-
-
 });

@@ -61,7 +61,7 @@ body  {
   justify-content: space-around;
 }
 
-#today  {
+#day0  {
   background-color: blue;
   border-radius: 22px;
   width: 15%;
