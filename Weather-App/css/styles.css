@@ -47,7 +47,7 @@ body  {
   width: 25%;
   height: 200px;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 35px;
 }
 
 .middle-strip  {
@@ -121,13 +121,23 @@ body  {
   padding-top: 35px;
 }
 
+.selected  {
+  background-color: blue;
+  border-radius: 22px;
+  border: solid 5px red;
+  width: 15%;
+  height: 200px;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 35px;
+}
+
 .bottom-strip  {
   height: 200px;
-  width: 15%;
+  width: 100%;
   border: solid 2px white;
   position: relative;
   top: 100px;
-  left: 20px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -136,8 +146,9 @@ body  {
 
 #sunrise  {
   background-color: green;
-  width: 100%;
+  width: 20%;
   height: 100px;
+  margin-left: 750px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
@@ -145,8 +156,9 @@ body  {
 
 #sunset  {
   background-color: green;
-  width: 100%;
+  width: 20%;
   height: 100px;
+  margin-left: 750px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
@@ -154,8 +166,9 @@ body  {
 
 #windspeed  {
   background-color: green;
-  width: 100%;
+  width: 20%;
   height: 100px;
+  margin-left: 750px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
@@ -163,8 +176,9 @@ body  {
 
 #visibility  {
   background-color: green;
-  width: 100%;
+  width: 20%;
   height: 100px;
+  margin-left: 750px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
@@ -172,8 +186,9 @@ body  {
 
 #humidity  {
   background-color: green;
-  width: 100%;
+  width: 20%;
   height: 100px;
+  margin-left: 750px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;

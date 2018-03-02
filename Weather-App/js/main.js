@@ -13,7 +13,9 @@ $(document).ready(function() {
 
   function getWeather(jsonRet)  {
     var jsonDoc = JSON.parse(jsonRet.responseText);
-    document.getElementById('current').innerHTML = jsonDoc.current.temp_c +'&#8451';
+    document.getElementById('current').innerHTML =
+      jsonDoc.current.temp_c +'&#8451' + '<br>' +
+      jsonDoc.current.condition.text;
     var loc = jsonDoc.location.name;
     var reg = jsonDoc.location.region;
     document.getElementById('location').innerHTML = loc + "<br>" + reg
@@ -88,9 +90,6 @@ $('#day6').on('click', function()  {
 })
 
 function getStats(d)  {
-  $('#day' + d).css('border', 'solid 5px red');
-  var leftPos = String(d * 330) + 'px';
-  $('.bottom-strip').css('left', leftPos);
   document.getElementById('sunrise').innerHTML
     = 'Sunrise: ' + jsonDoc.forecast.forecastday[d].astro.sunrise;
   document.getElementById('sunset').innerHTML
