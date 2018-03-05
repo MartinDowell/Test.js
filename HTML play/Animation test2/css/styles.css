@@ -1,0 +1,32 @@
+.container  {
+  width: 90%;
+  hieght: 200px;
+  border: solid 2px black;
+  position: absolute;
+  left: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box  {
+  font-family: arial;
+  font-size: 50px;
+  background-color: tomato;
+  padding: 50px;
+}
+
+.box5  {
+  font-family: arial;
+  font-size: 50px;
+  background-color: pink;
+  position: absolute;
+  /* display: none; */
+}
+
+/* .box5-vis  {
+  font-family: arial;
+  font-size: 50px;
+  background-color: tomato;
+  padding: 50px;
+  display: inline;
+} */
