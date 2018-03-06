@@ -1,7 +1,4 @@
-.box  {
-  background-color: tomato;
-  color: white;
-  font-size: 2em;
-  text-align: center;
-  width: 25%;
+canvas  {
+  border: solid 2px black;
+  height: 1000px;
 }
