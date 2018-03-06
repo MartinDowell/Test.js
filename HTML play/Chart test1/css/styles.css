@@ -1,4 +1,4 @@
 canvas  {
   border: solid 2px black;
-  height: 1000px;
+  max-width: 750px
 }
