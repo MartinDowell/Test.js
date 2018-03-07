@@ -59,50 +59,62 @@ function resetStats()  {
           function() {$('#humidity').animate({left: '+0px', opacity: 0}, 0, 'linear')})})})});
 }
 
+function resetBorder()  {
+  for (i=0; i<=5; i++)  {
+    $('#day'+i).removeClass('selected');
+  };
+}
 
 // Get stats for each day
 
 $('#day0').on('click', function()  {
+  resetBorder();
   resetStats();
   var d = 0;
+  $('#day0').addClass('selected');
   getStats(d);
 })
 
 $('#day1').on('click', function()  {
+  resetBorder();
   resetStats();
   var d = 1;
+  $('#day1').addClass('selected');
   getStats(d);
 })
 
 $('#day2').on('click', function()  {
+  resetBorder();
   resetStats();
   var d = 2;
+  $('#day2').addClass('selected');
   getStats(d);
 })
 
 $('#day3').on('click', function()  {
+  resetBorder();
   resetStats();
   var d = 3;
+  $('#day3').addClass('selected');
   getStats(d);
 })
 
 $('#day4').on('click', function()  {
+  resetBorder();
   resetStats();
   var d = 4;
+  $('#day4').addClass('selected');
   getStats(d);
 })
 
 $('#day5').on('click', function()  {
+  resetBorder();
   resetStats();
   var d = 5;
+  $('#day5').addClass('selected');
   getStats(d);
 })
 
-$('#day6').on('click', function()  {
-  resetStats();
-  var d = 6;
-  getStats(d);
-})
 
 function getStats(d)  {
   document.getElementById('sunrise').innerHTML
