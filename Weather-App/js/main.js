@@ -51,40 +51,55 @@ $(document).ready(function() {
         + jsonDoc.forecast.forecastday[i].day.mintemp_c;
       }
 
+function resetStats()  {
+  $('#sunrise').animate({left: '+0px', opacity: 0}, 0, 'linear',
+    function() {$('#sunset').animate({left: '+0px', opacity: 0}, 0, 'linear',
+      function() {$('#windspeed').animate({left: '+0px', opacity: 0}, 0, 'linear',
+        function() {$('#visibility').animate({left: '+0px', opacity: 0}, 0, 'linear',
+          function() {$('#humidity').animate({left: '+0px', opacity: 0}, 0, 'linear')})})})});
+}
+
 
 // Get stats for each day
 
 $('#day0').on('click', function()  {
+  resetStats();
   var d = 0;
   getStats(d);
 })
 
 $('#day1').on('click', function()  {
+  resetStats();
   var d = 1;
   getStats(d);
 })
 
 $('#day2').on('click', function()  {
+  resetStats();
   var d = 2;
   getStats(d);
 })
 
 $('#day3').on('click', function()  {
+  resetStats();
   var d = 3;
   getStats(d);
 })
 
 $('#day4').on('click', function()  {
+  resetStats();
   var d = 4;
   getStats(d);
 })
 
 $('#day5').on('click', function()  {
+  resetStats();
   var d = 5;
   getStats(d);
 })
 
 $('#day6').on('click', function()  {
+  resetStats();
   var d = 6;
   getStats(d);
 })
