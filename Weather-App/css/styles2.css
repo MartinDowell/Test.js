@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.header  {
+  font-family: Bellefair;
+  font-size: 120px;
+  color: black;
+  text-align: center;
+}
+
+canvas  {
+  border: solid 2px black;
+  max-width: 50%;
+}
