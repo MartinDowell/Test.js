@@ -100,7 +100,16 @@ function getStats(d)  {
     = 'Visibility: ' + jsonDoc.forecast.forecastday[d].day.avgvis_miles + ' miles';
   document.getElementById('humidity').innerHTML
     = 'Humidity: ' + jsonDoc.forecast.forecastday[d].day.avghumidity + '%';
-}
+
+  $('#sunrise').animate({left: '+525px', opacity: 1}, 250, 'linear',
+    function() {$('#sunset').animate({left: '+525px', opacity: 1}, 250, 'linear',
+      function() {$('#windspeed').animate({left: '+525px', opacity: 1}, 250, 'linear',
+        function() {$('#visibility').animate({left: '+525px', opacity: 1}, 250, 'linear',
+          function() {$('#humidity').animate({left: '+525px', opacity: 1}, 250, 'linear')})})})});
+
+  };  //end of getStats
+
+
 
   };  //end of getWeather function
-});   //end of document selector
+});   //end of document ready method

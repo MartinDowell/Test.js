@@ -30,6 +30,7 @@ body  {
   background-color: blue;
   width: 25%;
   height: 200px;
+  border-radius: 22px;
   text-align: center;
   padding-top: 35px;
 }
@@ -38,6 +39,7 @@ body  {
   background-color: blue;
   width: 25%;
   height: 200px;
+  border-radius: 22px;
   text-align: center;
   padding-top: 10px;
 }
@@ -46,6 +48,7 @@ body  {
   background-color: blue;
   width: 25%;
   height: 200px;
+  border-radius: 22px;
   text-align: center;
   padding-top: 35px;
 }
@@ -139,59 +142,74 @@ body  {
   position: relative;
   top: 100px;
   color: white;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around; */
 }
 
 #sunrise  {
   background-color: green;
   width: 20%;
-  height: 100px;
-  margin-left: 750px;
+  height: 40px;
+  margin-left: 250px;
+  top: 100px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
+  position: relative;
+  opacity: 0;
 }
 
 #sunset  {
   background-color: green;
   width: 20%;
-  height: 100px;
-  margin-left: 750px;
+  height: 40px;
+  margin-left: 250px;
+  top: 100px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
+  position: relative;
+  opacity: 0;
 }
 
 #windspeed  {
   background-color: green;
   width: 20%;
-  height: 100px;
-  margin-left: 750px;
+  height: 40px;
+  margin-left: 250px;
+  top: 100px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
+  position: relative;
+  opacity: 0;
 }
 
 #visibility  {
   background-color: green;
   width: 20%;
-  height: 100px;
-  margin-left: 750px;
+  height: 40px;
+  margin-left: 250px;
+  top: 100px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
+  position: relative;
+  opacity: 0;
 }
 
 #humidity  {
   background-color: green;
   width: 20%;
-  height: 100px;
-  margin-left: 750px;
+  height: 40px;
+  margin-left: 250px;
+  top: 100px;
   text-align: center;
   font-size: 30px;
   border: solid black 3px;
+  position: relative;
+  opacity: 0;
 }
 
  footer  {

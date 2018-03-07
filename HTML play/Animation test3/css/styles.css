@@ -3,8 +3,52 @@
   width: 200px;
   opacity: 0;
   /* max-height: 30px; */
-  position: absolute;
-  left: 300px;
+  position: relative;
+  margin-left: 200px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.strip2  {
+  background-color: powderblue;
+  width: 200px;
+  opacity: 0;
+  /* max-height: 30px; */
+  position: relative;
+  margin-left: 200px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.strip3  {
+  background-color: powderblue;
+  width: 200px;
+  opacity: 0;
+  /* max-height: 30px; */
+  position: relative;
+  margin-left: 200px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.strip4  {
+  background-color: powderblue;
+  width: 200px;
+  opacity: 0;
+  /* max-height: 30px; */
+  position: relative;
+  margin-left: 200px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.strip5  {
+  background-color: powderblue;
+  width: 200px;
+  opacity: 0;
+  /* max-height: 30px; */
+  position: relative;
+  margin-left: 200px;
   text-align: center;
   font-size: 30px;
 }
