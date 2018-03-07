@@ -102,5 +102,5 @@ function getStats(d)  {
     = 'Humidity: ' + jsonDoc.forecast.forecastday[d].day.avghumidity + '%';
 }
 
-  };
-});
+  };  //end of getWeather function
+});   //end of document selector

@@ -1,0 +1,10 @@
+.strip1  {
+  background-color: powderblue;
+  width: 200px;
+  opacity: 0;
+  /* max-height: 30px; */
+  position: absolute;
+  left: 300px;
+  text-align: center;
+  font-size: 30px;
+}
