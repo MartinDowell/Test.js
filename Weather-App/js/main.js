@@ -71,7 +71,7 @@ $('#day0').on('click', function()  {
   resetBorder();
   resetStats();
   var d = 0;
-  $('#day0').addClass('selected');
+  $('#day0').toggleClass('selected');
   getStats(d);
 })
 
@@ -79,7 +79,7 @@ $('#day1').on('click', function()  {
   resetBorder();
   resetStats();
   var d = 1;
-  $('#day1').addClass('selected');
+  $('#day1').toggleClass('selected');
   getStats(d);
 })
 

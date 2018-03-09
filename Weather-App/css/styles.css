@@ -126,6 +126,7 @@ body  {
 
 .selected  {
   border: solid 5px red;
+  background-color: pink;
 }
 
 #sunrise  {
