@@ -9,7 +9,22 @@
   text-align: center;
 }
 
-canvas  {
+.container  {
+  max-width: 90%;
+  border: 2px solid red;
+}
+
+
+#temp-chart  {
   border: solid 2px black;
-  max-width: 50%;
+  max-width: 45%;
+  margin-left: 75px;
+}
+
+#rain-chart  {
+  border: solid 2px black;
+  max-width: 45%;
+  position: absolute;
+  margin-left: 970px;
+  bottom: 377px;
 }

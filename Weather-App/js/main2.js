@@ -14,51 +14,74 @@ $(document).ready(function() {
   function getWeather(jsonRet)  {
     var jsonDoc = JSON.parse(jsonRet.responseText);
 
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
+function genMaxTemp()  {
+  var maxTemp = [];
+  for (i = 0; i <= 5; i++)  {
+    maxTemp.push(jsonDoc.forecast.forecastday[i].day.maxtemp_c);
+    }
+  return maxTemp;
+}
+
+function genMinTemp()  {
+  var minTemp = [];
+  for (i = 0; i <= 5; i++)  {
+    minTemp.push(jsonDoc.forecast.forecastday[i].day.mintemp_c);
+    }
+  return minTemp;
+}
+
+function genDayName()  {
+  var d = new Date();
+  var n = d.getDay();
+  var nameDay = [];
+  nameDay[0] = 'Today';
+  var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  for (i = 1; i <=5 ; i++)  {
+    nameDay.push(days[n + i])
+  }
+  return nameDay;
+}
+
+
+    var ctx = document.getElementById("temp-chart").getContext('2d');
+    var tempChart = new Chart(ctx, {
+        type: 'line',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: genDayName(),
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 14, 10],
-                backgroundColor: [
-                  'rgba(255, 99, 132, 0.3)',
-                  'rgba(54, 162, 235, 0.3)',
-                  'rgba(255, 206, 86, 0.3)',
-                  'rgba(75, 192, 192, 0.3)',
-                  'rgba(153, 102, 255, 0.3)',
-                  'rgba(255, 159, 64, 0.3)'
-              ],
-              borderColor: [
-                  'rgba(255,99,132,1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 3
-          }]
+                label: 'Max Temp(ºc)',
+                data: genMaxTemp(),
+                fill: false,
+                backgroundColor: ['rgba(222, 77, 77, 0.25)'],
+                borderColor: ['rgba(222, 77, 77, 1)'],
+                borderWidth: 3
+                },{
+                label: 'Min Temp(ºc)',
+                data: genMinTemp(),
+                fill: false,
+                backgroundColor: ['rgba(77, 77, 222,0.25)'],
+                borderColor: ['rgba(77, 77, 222, 1)'],
+                borderWidth: 3
+              }]
       },
       options:{
         scales: {
               yAxes: [{
                   ticks: {
-                      beginAtZero:true
+                      beginAtZero:false
                   }
               }]
           },
         title:{
-          display:true,
-          text:'Nations Favourite Colours',
-          fontSize:25
+          display: true,
+          text: 'Daily Temperatures',
+          fontSize: 25
         },
         legend:{
-          display:true,
-          position:'right',
+          display: true,
+          position: 'right',
           labels:{
-            fontColor:'#000'
+            fontColor: '#000'
           }
         },
         layout:{
@@ -76,7 +99,72 @@ $(document).ready(function() {
       }
         });
 
+        function genPrecip()  {
+          var precip = [];
+          for (i = 0; i <= 5; i++)  {
+            precip.push(jsonDoc.forecast.forecastday[i].day.totalprecip_mm);
+            }
+          return precip;
+        }
 
+        var ctx = document.getElementById("rain-chart").getContext('2d');
+        var rainChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: genDayName(),
+                datasets: [{
+                    label: 'Precipitation(mm)',
+                    data: genPrecip(),
+                    fill: true,
+                    backgroundColor: ['rgba(77, 111, 222, 0.25)',
+                                      'rgba(77, 111, 222, 0.25)',
+                                      'rgba(77, 111, 222, 0.25)',
+                                      'rgba(77, 111, 222, 0.25)',
+                                      'rgba(77, 111, 222, 0.25)',
+                                      'rgba(77, 111, 222, 0.25)'],
+                    borderColor: ['rgba(77, 111, 222, 1)',
+                                  'rgba(77, 111, 222, 1)',
+                                  'rgba(77, 111, 222, 1)',
+                                  'rgba(77, 111, 222, 1)',
+                                  'rgba(77, 111, 222, 1)',
+                                  'rgba(77, 111, 222, 1)'],
+                    borderWidth: 3
+                    }]
+          },
+          options:{
+            scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              },
+            title:{
+              display:true,
+              text:'Daily Precipitation',
+              fontSize:25
+            },
+            legend:{
+              display:true,
+              position:'right',
+              labels:{
+                fontColor:'#000'
+              }
+            },
+            layout:{
+              padding:{
+                left:50,
+                right:0,
+                bottom:0,
+                top:0
+              }
+            },
+            tooltips:{
+              enabled:true
+            }
+
+          }
+            });
 
 
   }

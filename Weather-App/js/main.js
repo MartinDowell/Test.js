@@ -34,21 +34,21 @@ $(document).ready(function() {
     var todayMaxT = jsonDoc.forecast.forecastday[0].day.maxtemp_c;
     var todayMinT = jsonDoc.forecast.forecastday[0].day.mintemp_c;
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
-    document.getElementById('day0').innerHTML = todayDay + "<br>" +
+    document.getElementsByClassName('day0')[0].innerHTML = todayDay + "<br>" +
       todayCond + "<br>" +
-      todayMaxT + "<br>" +
-      todayMinT;
+      "Max:   " + todayMaxT + "<br>" +
+      "Min:   " + todayMinT;
 
 // Get next 5 days forecastday
     var d = new Date();
     var n = d.getDay();
     var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     for (i = 1; i <= 5; i++)  {
-      document.getElementById('day'+i).innerHTML
+      document.getElementsByClassName('day'+i)[0].innerHTML
         = days[n + i] + "<br>"
         + jsonDoc.forecast.forecastday[i].day.condition.text + "<br>"
-        + jsonDoc.forecast.forecastday[i].day.maxtemp_c + "<br>"
-        + jsonDoc.forecast.forecastday[i].day.mintemp_c;
+        + 'Max:   ' + jsonDoc.forecast.forecastday[i].day.maxtemp_c + "<br>"
+        + 'Min:   ' + jsonDoc.forecast.forecastday[i].day.mintemp_c;
       }
 
 function resetStats()  {
@@ -61,57 +61,57 @@ function resetStats()  {
 
 function resetBorder()  {
   for (i=0; i<=5; i++)  {
-    $('#day'+i).removeClass('selected');
+    $('.day'+i).removeClass('selected');
   };
 }
 
 // Get stats for each day
 
-$('#day0').on('click', function()  {
+$('.day0').on('click', function()  {
   resetBorder();
   resetStats();
   var d = 0;
-  $('#day0').toggleClass('selected');
+  $('.day0').toggleClass('selected');
   getStats(d);
 })
 
-$('#day1').on('click', function()  {
+$('.day1').on('click', function()  {
   resetBorder();
   resetStats();
   var d = 1;
-  $('#day1').toggleClass('selected');
+  $('.day1').toggleClass('selected');
   getStats(d);
 })
 
-$('#day2').on('click', function()  {
+$('.day2').on('click', function()  {
   resetBorder();
   resetStats();
   var d = 2;
-  $('#day2').addClass('selected');
+  $('.day2').addClass('selected');
   getStats(d);
 })
 
-$('#day3').on('click', function()  {
+$('.day3').on('click', function()  {
   resetBorder();
   resetStats();
   var d = 3;
-  $('#day3').addClass('selected');
+  $('.day3').addClass('selected');
   getStats(d);
 })
 
-$('#day4').on('click', function()  {
+$('.day4').on('click', function()  {
   resetBorder();
   resetStats();
   var d = 4;
-  $('#day4').addClass('selected');
+  $('.day4').addClass('selected');
   getStats(d);
 })
 
-$('#day5').on('click', function()  {
+$('.day5').on('click', function()  {
   resetBorder();
   resetStats();
   var d = 5;
-  $('#day5').addClass('selected');
+  $('.day5').addClass('selected');
   getStats(d);
 })
 
