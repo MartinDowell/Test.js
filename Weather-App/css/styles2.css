@@ -10,21 +10,24 @@
 }
 
 .container  {
-  max-width: 90%;
+  width: 98%;
   border: 2px solid red;
+  margin-left: 1%;
 }
 
 
 #temp-chart  {
   border: solid 2px black;
-  max-width: 45%;
-  margin-left: 75px;
+  max-width: 48%;
+  display: inline;
+  /* margin-left: 75px; */
 }
 
 #rain-chart  {
   border: solid 2px black;
-  max-width: 45%;
-  position: absolute;
+  max-width: 48%;
+  display: inline;
+  /* position: absolute; */
   margin-left: 970px;
   bottom: 377px;
 }
