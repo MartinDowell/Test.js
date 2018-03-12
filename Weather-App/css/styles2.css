@@ -9,25 +9,29 @@
   text-align: center;
 }
 
-.container  {
+/* .container  {
   width: 98%;
   border: 2px solid red;
   margin-left: 1%;
+} */
+
+.canbox  {
+  /* max-width: 800px;
+  max-height: 500px; */
+  /* position: relative;
+  display: inline; */
 }
 
 
 #temp-chart  {
   border: solid 2px black;
-  max-width: 48%;
-  display: inline;
-  /* margin-left: 75px; */
+  max-width: 800px;
+  /* max-height: 500px; */
 }
 
 #rain-chart  {
   border: solid 2px black;
-  max-width: 48%;
+  max-width: 800px;
+  position: relative;
   display: inline;
-  /* position: absolute; */
-  margin-left: 970px;
-  bottom: 377px;
 }

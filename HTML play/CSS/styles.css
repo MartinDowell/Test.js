@@ -2,33 +2,37 @@
   box-sizing: border-box;
 }
 
-.strip  {
+/* .strip  {
   border: 2px solid black;
   width: 100%;
-  /* display: flex; */
+} */
+
+.c1  {
+  max-width: 45%;
+  position: relative;
+  display: inline;
 }
 
-
 #box1  {
-  max-width: 48%;
+  width: 12em;
   background-color: pink;
-  font-size: 50px;
+  /* font-size: 50px; */
   text-align: center;
   /* position: relative;
   margin-left: 500px; */
   border: 2px solid red;
-  display: inline;
+
 }
 
 #box2  {
-  max-width: 48%;
+  width: 12em;
   background-color: pink;
-  font-size: 50px;
+  /* font-size: 50px; */
   text-align: center;
-  /* position: relative; */
-  margin-left: 1500px;
+  position: relative;
+  left: 700px;
   border: 2px solid red;
-  display: inline;
+
 }
 
 .selected  {
