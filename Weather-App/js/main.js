@@ -30,7 +30,7 @@ $(document).ready(function() {
     var monthN = months[month - 1];
     document.getElementById('datetime').innerHTML = time +"<br>"+ day +"<br>"+ monthN;
 // Get today's overview
-    var todayDay = 'TODAY';
+    var todayDay = '<b>' + 'TODAY' + '</b>';
     var todayMaxT = jsonDoc.forecast.forecastday[0].day.maxtemp_c;
     var todayMinT = jsonDoc.forecast.forecastday[0].day.mintemp_c;
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
@@ -45,7 +45,7 @@ $(document).ready(function() {
     var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     for (i = 1; i <= 5; i++)  {
       document.getElementsByClassName('day'+i)[0].innerHTML
-        = days[n + i] + "<br>"
+        = '<b>' + days[n + i] + '</b>' + "<br>"
         + jsonDoc.forecast.forecastday[i].day.condition.text + "<br>"
         + 'Max:   ' + jsonDoc.forecast.forecastday[i].day.maxtemp_c + "<br>"
         + 'Min:   ' + jsonDoc.forecast.forecastday[i].day.mintemp_c;

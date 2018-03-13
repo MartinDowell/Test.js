@@ -10,8 +10,9 @@ body  {
 }
 
 .header  {
-  font-family: Bellefair;
+  font-family: Libre Franklin, sans-serif;
   font-size: 120px;
+  text-shadow: 5px 5px 15px black;
   color: white;
   text-align: center;
 }
@@ -19,35 +20,39 @@ body  {
 .top-strip  {
   height: 200px;
   width: 100%;
-  border: solid 2px white;
+  font-family: Libre Franklin, sans-serif;
   font-size: 50px;
+  text-shadow: 5px 5px 15px black;
   color: white;
   display: flex;
   justify-content: space-around;
 }
 
 #location  {
-  background-color: blue;
+  background-color: #273c7544;
   width: 25%;
   height: 200px;
+  border: 5px solid #273c75;
   border-radius: 22px;
   text-align: center;
-  padding-top: 35px;
+  padding-top: 5px;
 }
 
 #datetime  {
-  background-color: blue;
+  background-color: #273c7544;
   width: 25%;
   height: 200px;
+  border: 5px solid #273c75;
   border-radius: 22px;
   text-align: center;
   padding-top: 10px;
 }
 
 #current  {
-  background-color: blue;
+  background-color: #273c7544;
   width: 25%;
   height: 200px;
+  border: 5px solid #273c75;
   border-radius: 22px;
   text-align: center;
   padding-top: 35px;
@@ -56,7 +61,8 @@ body  {
 .middle-strip  {
   height: 200px;
   width: 100%;
-  border: solid 2px white;
+  font-family: Libre Franklin, sans-serif;
+  text-shadow: 5px 5px 15px black;
   position: relative;
   top: 50px;
   color: white;
@@ -65,142 +71,179 @@ body  {
 }
 
 .day0  {
-  background-color: blue;
+  background-color: #192a5644;
+  border: 5px solid #192a56;
   border-radius: 22px;
   width: 15%;
   height: 200px;
   text-align: center;
   font-size: 30px;
-  padding-top: 35px;
+  padding-top: 5px;
 }
 
 .day1  {
-  background-color: blue;
+  background-color: #192a5644;
+  border: 5px solid #192a56;
   border-radius: 22px;
   width: 15%;
   height: 200px;
   text-align: center;
   font-size: 30px;
-  padding-top: 35px;
+  padding-top: 5px;
 }
 
 .day2  {
-  background-color: blue;
+  background-color: #192a5644;
+  border: 5px solid #192a56;
   border-radius: 22px;
   width: 15%;
   height: 200px;
   text-align: center;
   font-size: 30px;
-  padding-top: 35px;
+  padding-top: 5px;
 }
 
 .day3  {
-  background-color: blue;
+  background-color: #192a5644;
+  border: 5px solid #192a56;
   border-radius: 22px;
   width: 15%;
   height: 200px;
   text-align: center;
   font-size: 30px;
-  padding-top: 35px;
+  padding-top: 5px;
 }
 
 .day4  {
-  background-color: blue;
+  background-color: #192a5644;
+  border: 5px solid #192a56;
   border-radius: 22px;
   width: 15%;
   height: 200px;
   text-align: center;
   font-size: 30px;
-  padding-top: 35px;
+  padding-top: 5px;
 }
 
 .day5  {
-  background-color: blue;
+  background-color: #192a5644;
+  border: 5px solid #192a56;
   border-radius: 22px;
   width: 15%;
   height: 200px;
   text-align: center;
   font-size: 30px;
-  padding-top: 35px;
+  padding-top: 5px;
+}
+
+.day0:hover  {
+  background-color: #192a56aa;
+}
+
+.day1:hover  {
+  background-color: #192a56aa;
+}
+
+.day2:hover  {
+  background-color: #192a56aa;
+}
+
+.day3:hover  {
+  background-color: #192a56aa;
+}
+
+.day4:hover  {
+  background-color: #192a56aa;
+}
+
+.day5:hover  {
+  background-color: #192a56aa;
 }
 
 .selected  {
-  border: solid 5px red;
-  background-color: pink;
+  border: 5px solid #192a56;
+  background-color: #192a56ee;
 }
 
 #sunrise  {
-  background-color: green;
+  background-color: #40739e;
   width: 20%;
   height: 40px;
   margin-left: 250px;
   top: 100px;
   text-align: center;
   font-size: 30px;
+  color: #dcdde1;
   border: solid black 3px;
   position: relative;
   opacity: 0;
 }
 
 #sunset  {
-  background-color: green;
+  background-color: #40739e;
   width: 20%;
   height: 40px;
   margin-left: 250px;
   top: 100px;
   text-align: center;
   font-size: 30px;
+  color: #dcdde1;
   border: solid black 3px;
   position: relative;
   opacity: 0;
 }
 
 #windspeed  {
-  background-color: green;
+  background-color: #40739e;
   width: 20%;
   height: 40px;
   margin-left: 250px;
   top: 100px;
   text-align: center;
   font-size: 30px;
+  color: #dcdde1;
   border: solid black 3px;
   position: relative;
   opacity: 0;
 }
 
 #visibility  {
-  background-color: green;
+  background-color: #40739e;
   width: 20%;
   height: 40px;
   margin-left: 250px;
   top: 100px;
   text-align: center;
   font-size: 30px;
+  color: #dcdde1;
   border: solid black 3px;
   position: relative;
   opacity: 0;
 }
 
 #humidity  {
-  background-color: green;
+  background-color: #40739e;
   width: 20%;
   height: 40px;
   margin-left: 250px;
   top: 100px;
   text-align: center;
   font-size: 30px;
+  color: #dcdde1;
   border: solid black 3px;
   position: relative;
   opacity: 0;
 }
 
 #charts  {
-  background-color: powderblue;
+  background-color: #7f8fa6;
   width: 150px;
   height: 150px;
+  border: 3px solid #8c7ae6;
   border-radius: 100%;
+  font-family: Libre Franklin, sans-serif;
   font-size: 40px;
-  color: black;
+  color: #8c7ae6;
   text-align: center;
   padding-top: 50px;
   position: absolute;
@@ -222,6 +265,6 @@ body  {
    margin-bottom: 0px;
  }
 
-a:hover  {
+#charts:hover  {
   background-color: yellow;
 }
