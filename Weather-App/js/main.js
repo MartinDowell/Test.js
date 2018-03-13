@@ -31,23 +31,34 @@ $(document).ready(function() {
     document.getElementById('datetime').innerHTML = time +"<br>"+ day +"<br>"+ monthN;
 // Get today's overview
     var todayDay = '<b>' + 'TODAY' + '</b>';
+    var todayCBr = '';
     var todayMaxT = jsonDoc.forecast.forecastday[0].day.maxtemp_c;
     var todayMinT = jsonDoc.forecast.forecastday[0].day.mintemp_c;
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
-    document.getElementsByClassName('day0')[0].innerHTML = todayDay + "<br>" +
-      todayCond + "<br>" +
-      "Max:   " + todayMaxT +' º' + 'c' + "<br>" +
+    if (todayCond.length < 17)  {
+      var todayCBr = '<br>'
+    };
+    document.getElementsByClassName('day0')[0].innerHTML = todayDay + '<br>' +
+      todayCBr + todayCond + '<br>' +
+      "Max:   " + todayMaxT +' º' + 'c' + '<br>' +
       "Min:   " + todayMinT +' º' + 'c';
 
 // Get next 5 days forecastday
+    var todayCBr = '';
     var d = new Date();
     var n = d.getDay();
     var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
     for (i = 1; i <= 5; i++)  {
+      if (jsonDoc.forecast.forecastday[i].day.condition.text.length < 17)  {
+        var todayCBr = '<br>'
+      }  else  {
+          var todayCBr = ''
+        };
       document.getElementsByClassName('day'+i)[0].innerHTML
-        = '<b>' + days[n + i] + '</b>' + "<br>"
-        + jsonDoc.forecast.forecastday[i].day.condition.text + "<br>"
-        + 'Max:   ' + jsonDoc.forecast.forecastday[i].day.maxtemp_c +' º' + 'c' + "<br>"
+        = '<b>' + days[n + i] + '</b>' + '<br>'
+        + jsonDoc.forecast.forecastday[i].day.condition.text + '<br>' + todayCBr
+        + 'Max:   ' + jsonDoc.forecast.forecastday[i].day.maxtemp_c +' º' + 'c' + '<br>'
         + 'Min:   ' + jsonDoc.forecast.forecastday[i].day.mintemp_c +' º' + 'c';
       }
 
