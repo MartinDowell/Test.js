@@ -10,10 +10,10 @@ body  {
 }
 
 .header  {
-  font-family: Libre Franklin, sans-serif;
+  font-family: 'Trade Winds', cursive;
   font-size: 120px;
   text-shadow: 5px 5px 15px black;
-  color: white;
+  color: #fbc531;
   text-align: center;
 }
 
@@ -24,6 +24,8 @@ body  {
   font-size: 50px;
   text-shadow: 5px 5px 15px black;
   color: white;
+  position: relative;
+  top: 50px;
   display: flex;
   justify-content: space-around;
 }
@@ -64,7 +66,7 @@ body  {
   font-family: Libre Franklin, sans-serif;
   text-shadow: 5px 5px 15px black;
   position: relative;
-  top: 50px;
+  top: 120px;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -170,9 +172,10 @@ body  {
   width: 20%;
   height: 40px;
   margin-left: 250px;
-  top: 100px;
+  top: 150px;
   text-align: center;
-  font-size: 30px;
+  font-family: Libre Franklin, sans-serif;
+  font-size: 28px;
   color: #dcdde1;
   border: solid black 3px;
   position: relative;
@@ -184,9 +187,10 @@ body  {
   width: 20%;
   height: 40px;
   margin-left: 250px;
-  top: 100px;
+  top: 150px;
   text-align: center;
-  font-size: 30px;
+  font-family: Libre Franklin, sans-serif;
+  font-size: 28px;
   color: #dcdde1;
   border: solid black 3px;
   position: relative;
@@ -198,9 +202,10 @@ body  {
   width: 20%;
   height: 40px;
   margin-left: 250px;
-  top: 100px;
+  top: 150px;
   text-align: center;
-  font-size: 30px;
+  font-family: Libre Franklin, sans-serif;
+  font-size: 28px;
   color: #dcdde1;
   border: solid black 3px;
   position: relative;
@@ -212,9 +217,10 @@ body  {
   width: 20%;
   height: 40px;
   margin-left: 250px;
-  top: 100px;
+  top: 150px;
   text-align: center;
-  font-size: 30px;
+  font-family: Libre Franklin, sans-serif;
+  font-size: 28px;
   color: #dcdde1;
   border: solid black 3px;
   position: relative;
@@ -226,9 +232,10 @@ body  {
   width: 20%;
   height: 40px;
   margin-left: 250px;
-  top: 100px;
+  top: 150px;
   text-align: center;
-  font-size: 30px;
+  font-family: Libre Franklin, sans-serif;
+  font-size: 28px;
   color: #dcdde1;
   border: solid black 3px;
   position: relative;
@@ -236,7 +243,8 @@ body  {
 }
 
 #charts  {
-  background-color: #7f8fa6;
+  background-color: #e1b12c;
+  box-shadow: 5px 10px 8px #00000088;
   width: 150px;
   height: 150px;
   border: 3px solid #8c7ae6;
@@ -245,7 +253,7 @@ body  {
   font-size: 40px;
   color: #8c7ae6;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 45px;
   position: absolute;
   right: 200px;
 }
@@ -266,5 +274,5 @@ body  {
  }
 
 #charts:hover  {
-  background-color: yellow;
+  background-color: #0097e6;
 }

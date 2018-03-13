@@ -14,7 +14,7 @@ $(document).ready(function() {
   function getWeather(jsonRet)  {
     var jsonDoc = JSON.parse(jsonRet.responseText);
     document.getElementById('current').innerHTML =
-      jsonDoc.current.temp_c +'&#8451' + '<br>' +
+      jsonDoc.current.temp_c +' º' + 'c' + '<br>' +
       jsonDoc.current.condition.text;
     var loc = jsonDoc.location.name;
     var reg = jsonDoc.location.region;
@@ -36,8 +36,8 @@ $(document).ready(function() {
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
     document.getElementsByClassName('day0')[0].innerHTML = todayDay + "<br>" +
       todayCond + "<br>" +
-      "Max:   " + todayMaxT + "<br>" +
-      "Min:   " + todayMinT;
+      "Max:   " + todayMaxT +' º' + 'c' + "<br>" +
+      "Min:   " + todayMinT +' º' + 'c';
 
 // Get next 5 days forecastday
     var d = new Date();
@@ -47,8 +47,8 @@ $(document).ready(function() {
       document.getElementsByClassName('day'+i)[0].innerHTML
         = '<b>' + days[n + i] + '</b>' + "<br>"
         + jsonDoc.forecast.forecastday[i].day.condition.text + "<br>"
-        + 'Max:   ' + jsonDoc.forecast.forecastday[i].day.maxtemp_c + "<br>"
-        + 'Min:   ' + jsonDoc.forecast.forecastday[i].day.mintemp_c;
+        + 'Max:   ' + jsonDoc.forecast.forecastday[i].day.maxtemp_c +' º' + 'c' + "<br>"
+        + 'Min:   ' + jsonDoc.forecast.forecastday[i].day.mintemp_c +' º' + 'c';
       }
 
 function resetStats()  {
@@ -118,15 +118,15 @@ $('.day5').on('click', function()  {
 
 function getStats(d)  {
   document.getElementById('sunrise').innerHTML
-    = 'Sunrise: ' + jsonDoc.forecast.forecastday[d].astro.sunrise;
+    = 'Sunrise:  ' + jsonDoc.forecast.forecastday[d].astro.sunrise;
   document.getElementById('sunset').innerHTML
-    = 'Sunset: ' + jsonDoc.forecast.forecastday[d].astro.sunset;
+    = 'Sunset:  ' + jsonDoc.forecast.forecastday[d].astro.sunset;
   document.getElementById('windspeed').innerHTML
-    = 'Windspeed: ' + jsonDoc.forecast.forecastday[d].day.maxwind_mph + 'mph';
+    = 'Windspeed:  ' + jsonDoc.forecast.forecastday[d].day.maxwind_mph + ' mph';
   document.getElementById('visibility').innerHTML
-    = 'Visibility: ' + jsonDoc.forecast.forecastday[d].day.avgvis_miles + ' miles';
+    = 'Visibility:  ' + jsonDoc.forecast.forecastday[d].day.avgvis_miles + ' miles';
   document.getElementById('humidity').innerHTML
-    = 'Humidity: ' + jsonDoc.forecast.forecastday[d].day.avghumidity + '%';
+    = 'Humidity:  ' + jsonDoc.forecast.forecastday[d].day.avghumidity + '%';
 
   $('#sunrise').animate({left: '+525px', opacity: 1}, 250, 'linear',
     function() {$('#sunset').animate({left: '+525px', opacity: 1}, 250, 'linear',
