@@ -2,36 +2,49 @@
     box-sizing: border-box;
 }
 
+.mainScr  {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left:5%;
+  top: 5%;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 15% 70% 15%;
+}
+
+
 header  {
-  width: 15%;
-  height: 100px;
+  grid-column: 1/2;
+  grid-row: 1/2;
   border: 2px solid rgb(111, 111, 111);
 }
 
 nav  {
-  width: 15%;
-  height: 800px;
+  grid-column: 1/2;
+  grid-row: 2/3;
   border: 2px solid rgb(111, 111, 111);
 }
 
 footer  {
-  width: 15%;
-  height: 100px;
+  grid-column: 1/2;
+  grid-row: 3/4;
   border: 2px solid rgb(111, 111, 111);
 }
 
 .mainPage  {
-width: 50%;
-height: 50%;
-}
-
-.mainScr  {
-  width: 85%;
-  height: 1000px;
+  grid-column: 2/3;
+  grid-row: 1/4;
   border: 2px solid rgb(111, 111, 111);
 }
 
 .title  {
+  position: relative;
+  left: 10%;
+  top: 50px;
+  margin: 100px;
   color: black;
   font-size: 22px;
+  display: inline;
+  border: 2px solid red;
 }
