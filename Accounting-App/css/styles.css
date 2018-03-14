@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: 15% 85%;
   grid-template-rows: 15% 70% 15%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -18,24 +19,34 @@ header  {
   grid-column: 1/2;
   grid-row: 1/2;
   border: 2px solid rgb(111, 111, 111);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  text-align: center;
 }
 
 nav  {
   grid-column: 1/2;
   grid-row: 2/3;
   border: 2px solid rgb(111, 111, 111);
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
 }
 
 footer  {
   grid-column: 1/2;
   grid-row: 3/4;
   border: 2px solid rgb(111, 111, 111);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
 }
 
 .mainPage  {
   grid-column: 2/3;
   grid-row: 1/4;
   border: 2px solid rgb(111, 111, 111);
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  background-color: rgba(126, 255, 245, 0.4);
 }
 
 .title  {
@@ -46,5 +57,11 @@ footer  {
   color: black;
   font-size: 22px;
   display: inline;
+  border: 2px solid red;
+}
+
+.mainTable  {
+  position: relative;
+  top: 50px;
   border: 2px solid red;
 }
