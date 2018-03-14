@@ -35,7 +35,7 @@ $(document).ready(function() {
     var todayMaxT = jsonDoc.forecast.forecastday[0].day.maxtemp_c;
     var todayMinT = jsonDoc.forecast.forecastday[0].day.mintemp_c;
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
-    if (todayCond.length < 17)  {
+    if (todayCond.length < 20)  {
       var todayCBr = '<br>'
     };
     document.getElementsByClassName('day0')[0].innerHTML = todayDay + '<br>' +
@@ -50,7 +50,7 @@ $(document).ready(function() {
     var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
     for (i = 1; i <= 5; i++)  {
-      if (jsonDoc.forecast.forecastday[i].day.condition.text.length < 17)  {
+      if (jsonDoc.forecast.forecastday[i].day.condition.text.length < 20)  {
         var todayCBr = '<br>'
       }  else  {
           var todayCBr = ''

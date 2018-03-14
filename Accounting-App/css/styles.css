@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+header  {
+  width: 15%;
+  height: 100px;
+  border: 2px solid rgb(111, 111, 111);
+}
+
+nav  {
+  width: 15%;
+  height: 800px;
+  border: 2px solid rgb(111, 111, 111);
+}
+
+footer  {
+  width: 15%;
+  height: 100px;
+  border: 2px solid rgb(111, 111, 111);
+}
+
+.mainPage  {
+width: 50%;
+height: 50%;
+}
+
+.mainScr  {
+  width: 85%;
+  height: 1000px;
+  border: 2px solid rgb(111, 111, 111);
+}
+
+.title  {
+  color: black;
+  font-size: 22px;
+}
