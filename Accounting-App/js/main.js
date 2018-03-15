@@ -35,7 +35,6 @@ function addRow(dateVal, typeVal, commentsVal, amountVal)  {
                             '<td>' + '<input type="button" value="Del" onclick="deleteRow('+id+')"/>' + '</td>' +
                             '<td>' + id + '</td>' +
                     '</tr>');
-                    alert(id);
   id +=1;
   return id;
 }
