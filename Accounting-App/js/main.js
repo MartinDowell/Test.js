@@ -18,12 +18,13 @@ function sumArray()  {
   }
   balanceVal = balance.toString();
   return balanceVal;
-}
+};
 
-function deleteRow(id){
-  alert('splat!');
-   // $('#' + id).remove();
-}
+function deleteRow(id)  {
+  alert(id);
+   $('#' + id).remove();
+
+};
 
 function addRow(dateVal, typeVal, commentsVal, amountVal)  {
 
@@ -32,11 +33,12 @@ function addRow(dateVal, typeVal, commentsVal, amountVal)  {
                             '<td>' + commentsVal + '</td>' +
                             '<td>' + '£' + amountVal + '</td>' +
                             '<td>' + '£' + balanceVal + '</td>' +
-                            '<td>' + '<input type="button" value="Del" onclick="deleteRow('+id+')"/>' + '</td>' +
+                            '<td>' + '<input type="button" value="Del" id = del'+id+'>' + '</td>' +
                             '<td>' + id + '</td>' +
                     '</tr>');
+  document.getElementById('del'+id).addEventListener("click", deleteRow(id));
   id +=1;
-  return id;
+  // return id;
 }
 
 
