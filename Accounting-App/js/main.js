@@ -36,7 +36,7 @@ function addRow(dateVal, typeVal, commentsVal, amountVal)  {
                             '<td>' + '<input type="button" value="Del" id = del'+id+'>' + '</td>' +
                             '<td>' + id + '</td>' +
                     '</tr>');
-  document.getElementById('del'+id).addEventListener("click", deleteRow(id));
+  document.getElementById('del'+id).addEventListener("click", alert('splat'));
   id +=1;
   // return id;
 }
