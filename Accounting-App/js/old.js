@@ -8,29 +8,23 @@ $('.title-charts').click(function()  {
   $('.title-charts').toggleClass('titleSelect');
 });
 
-var ledger = [];
+var total = [];
 var id = 100;
 
-function Transaction(date, type, comments, amount, id)  {
-  this.date = date;
-  this.type = type;
-  this.comments = comments;
-  this.amount = amount;
-  this.id = id;
-  ledger.push(this);
-  sumAmount(ledger);
-}
-
-function sumAmount(ledger)  {
+function sumArray()  {
   balance = 0;
-  for (i = 0; i < ledger.length; i++)  {
-    balance += parseInt(ledger[i].amount);
+  for (i = 0; i < total.length; i++)  {
+    balance += parseInt(total[i]);
   }
   balanceVal = balance.toString();
   return balanceVal;
 };
 
+function deleteRow(id)  {
+  alert(id);
+   $('#' + id).remove();
 
+};
 
 function addRow(dateVal, typeVal, commentsVal, amountVal)  {
 
@@ -42,8 +36,8 @@ function addRow(dateVal, typeVal, commentsVal, amountVal)  {
                             '<td>' + '<input type="button" value="Del" id = del'+id+'>' + '</td>' +
                             '<td>' + id + '</td>' +
                     '</tr>');
-
-
+  document.getElementById('del'+id).addEventListener("click", alert('splat'));
+  id +=1;
   // return id;
 }
 
@@ -53,9 +47,9 @@ $('button').click (function()  {
   var typeVal = $('input[name = type]').val();
   var commentsVal = $('input[name = comments]').val();
   var amountVal = $('input[name = amount]').val();
-  var transaction = new Transaction(dateVal, typeVal, commentsVal, amountVal, id);
-  addRow(dateVal, typeVal, commentsVal, amountVal, id);
-  id +=1;
+  total.push(amountVal);
+  sumArray();
+  addRow(dateVal, typeVal, commentsVal, amountVal);
 
 });
 
