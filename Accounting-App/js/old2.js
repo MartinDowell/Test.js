@@ -19,7 +19,6 @@ function Transaction(date, type, comments, amount, id)  {
   this.id = id;
   ledger.push(this);
   sumAmount(ledger);
-  this.balance = balanceVal;
 }
 
 function sumAmount(ledger)  {
@@ -37,22 +36,16 @@ function deleteRow(r) {
     document.getElementById('myTable').deleteRow(i);
 };
 
-function genTable(ledger)  {
-  $('tbody').remove();
-  for (i = 0; i < ledger.length; i++)  {
-    $('#myTable').append('<tbody>' + '<tr>' +
-        '<td>' + ledger[i].date + '</td>' +
-        '<td>' + ledger[i].type + '</td>' +
-        '<td>' + ledger[i].comments + '</td>' +
-        '<td>' + ledger[i].amount + '</td>' +
-        '<td>' + ledger[i].balance + '</td>' +
-    '</tr>' + '</tbody>');
-    }
-
-
-    // table.appendChild(tr);
+function addRow(dateVal, typeVal, commentsVal, amountVal)  {
+  $('#myTable').append('<tr id='+ id + '>' + '<td>' + dateVal + '</td>' +
+                            '<td>' + typeVal + '</td>' +
+                            '<td>' + commentsVal + '</td>' +
+                            '<td>' + '£' + amountVal + '</td>' +
+                            '<td>' + '£' + balanceVal + '</td>' +
+                            '<td>' + '<input type="button" value="Del" onclick=deleteRow()/>' + '</td>' +
+                            '<td>' + id + '</td>' +
+                    '</tr>');
 };
-
 
 
 $('button').click (function()  {
@@ -61,7 +54,7 @@ $('button').click (function()  {
   var commentsVal = $('input[name = comments]').val();
   var amountVal = $('input[name = amount]').val();
   var transaction = new Transaction(dateVal, typeVal, commentsVal, amountVal, id);
-  genTable(ledger);
+  addRow(dateVal, typeVal, commentsVal, amountVal);
   id +=1;
 });
 
