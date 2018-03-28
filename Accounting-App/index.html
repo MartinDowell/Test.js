@@ -34,15 +34,19 @@
           <th>Date</th>
           <th>Type</th>
           <th>Comments</th>
-          <th>Amount</th>
-          <th>Balance</th>
+          <th>Amount(in £)</th>
+          <th>Balance(in £)</th>
         </tr>
       </thead>
     </table>
 
     <form class = 'ss-input'>
       Date:<input type="text" name="date" value="yyyy-mm-dd">
-      Type:<input type="text" name="type" value="">
+      <!-- Type:<input type="text" name="type" value=""> -->
+      Type:<select>
+            <option value="Incoming">Incoming</option>
+            <option value="Outgoing">Outgoing</option>
+          </select>
       Comments:<input type="text" name="comments" value="">
       Amount:<input type="text" name="amount" value="">
               <button type="button" class="transact">Add</button>
