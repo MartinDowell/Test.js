@@ -11,16 +11,20 @@
 <body>
 <div class = 'mainScr'>
 
-  <header>Accounts</header>
+  <header>
+    <p>Quick-Accounts</p>
+    <img src='icons/70 Basic Icons-all-01.svg' height='42' width='42'>
+  </header>
 
   <nav>
-    <img src='icons/70 Basic Icons-all-01.svg' height='42' width='42'>
-    <p>Navigation</p>
-    <h3>blah</h3>
-    <h3>blah</h3>
-    <h3>blah</h3>
-    <h3>blah</h3>
-    <h3>blah</h3>
+
+    <p>NAVIGATION</p>
+    <br/>
+    <h3><img src='icons/70 Basic Icons-all-12.svg' height='20' width='20' hspace="20">Home</h3>
+    <h3><img src='icons/70 Basic Icons-all-13.svg' height='20' width='20' hspace="20">Transactions</h3>
+    <h3><img src='icons/70 Basic Icons-all-57.svg' height='20' width='20' hspace="20">Charts</h3>
+    <h3><img src='icons/70 Basic Icons-all-33.svg' height='20' width='20' hspace="20">Settings</h3>
+    <h3><img src='icons/70 Basic Icons-all-11.svg' height='20' width='20' hspace="20">About</h3>
   </nav>
 
   <div class = 'mainPage'>
@@ -28,6 +32,7 @@
     <div class = 'title-data'>Data</div>
     <div class = 'title-charts'>Charts</div>
 
+  <div class = 'tableContainer'>
     <table id = 'myTable'>
       <thead>
         <tr>
@@ -39,10 +44,11 @@
         </tr>
       </thead>
     </table>
+  </div>
 
     <form class = 'ss-input'>
       Date:<input type="text" name="date" value="yyyy-mm-dd">
-      <!-- Type:<input type="text" name="type" value=""> -->
+
       Type:<select>
             <option value="Incoming">Incoming</option>
             <option value="Outgoing">Outgoing</option>

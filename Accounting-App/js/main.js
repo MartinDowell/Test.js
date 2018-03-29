@@ -4,6 +4,7 @@ $('.title-data').click(function()  {
 
 $('.title-charts').click(function()  {
   $('.title-charts').toggleClass('titleSelect');
+  $('.title-data').toggleClass('titleSelect');
 });
 
 var ledger = [];
@@ -25,7 +26,7 @@ function Transaction(date, type, comments, amount, tId)  {
 function sumAmount()  {
   balance = 0;
   for (i = 0; i < ledger.length; i++)  {
-    balance += parseInt(ledger[i].amount);
+    balance += parseFloat(ledger[i].amount);
     ledger[i].balance = balance.toString();
   }
 };
@@ -47,10 +48,10 @@ function genTable()  {
         '<td>' + ledger[i].date + '</td>' +
         '<td>' + ledger[i].type + '</td>' +
         '<td>' + ledger[i].comments + '</td>' +
-        '<td>' + ledger[i].amount + '</td>' +
-        '<td>' + ledger[i].balance + '</td>' +
+        '<td>' + parseFloat(ledger[i].amount).toFixed(2) + '</td>' +
+        '<td>' + parseFloat(ledger[i].balance).toFixed(2) + '</td>' +
         // '<td>' + ledger[i].tId + '</td>' +
-        '<td>' + '<button id="' + (i+100) + '" onclick="deleteRow('+ (i+100) + ')">Del</button>' + '</td>' +
+        '<td>' + '<button id="' + (i+100) + '" onclick="deleteRow('+ (i+100) + ')"><img src = "icons/70 Basic Icons-all-06.svg"></button>' + '</td>' +
     '</tr>' + '</tbody>');
     }
 };
