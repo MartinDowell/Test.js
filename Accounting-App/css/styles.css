@@ -39,7 +39,7 @@ nav  {
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(111, 111, 111);
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   color: grey;
   padding-left: 50px;
 }
@@ -63,24 +63,50 @@ footer  {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.title-data  {
+.titleHome  {
   position: relative;
-  left: 10%;
   top: 50px;
   margin: 100px;
   font-weight: normal;
   color: black;
   font-size: 22px;
   display: inline;
-  font-weight: bold;
-  border-bottom: 3px solid rgb(24, 220, 255);
 }
 
-.title-charts  {
+.titleTransactions  {
   position: relative;
-  left: 10%;
   top: 50px;
-  margin: 100px;
+  font-weight: normal;
+  color: black;
+  font-size: 22px;
+  display: inline;
+
+}
+
+.titleCharts  {
+  position: relative;
+  left: 100px;
+  top: 50px;
+  font-weight: normal;
+  color: black;
+  font-size: 22px;
+  display: inline;
+}
+
+.titleSettings  {
+  position: relative;
+  left: 200px;
+  top: 50px;
+  font-weight: normal;
+  color: black;
+  font-size: 22px;
+  display: inline;
+}
+
+.titleAbout  {
+  position: relative;
+  left: 300px;
+  top: 50px;
   font-weight: normal;
   color: black;
   font-size: 22px;
@@ -90,6 +116,10 @@ footer  {
 .titleSelect  {
   font-weight: bold;
   border-bottom: 3px solid rgb(24, 220, 255);
+}
+
+.navSelect  {
+  font-weight: bolder;
 }
 
 table  {
@@ -119,4 +149,23 @@ table, th, td {
   position: absolute;
   top: 775px;
   left: 300px;
+}
+
+.about  {
+  position: fixed;
+  top: 400px;
+  left: 800px;
+  z-index: 1;
+  display: none;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  color: grey;
+  text-align: center;
+  width: 300px;
+  border: 2px solid black;
+}
+
+.visible {
+  display: block;
 }

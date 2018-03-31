@@ -1,10 +1,29 @@
-$('.title-data').click(function()  {
-  $('.title-data').toggleClass('titleSelect');
+$('.homeLink').click(function()  {
+  $('.home').toggleClass('visible');
+  $('.titleHome').toggleClass('titleSelect');
+  $('.homeLink').toggleClass('navSelect');
 });
 
-$('.title-charts').click(function()  {
-  $('.title-charts').toggleClass('titleSelect');
-  $('.title-data').toggleClass('titleSelect');
+$('.transactionsLink').click(function()  {
+  $('.titleTransactions').toggleClass('titleSelect');
+  $('.transactionsLink').toggleClass('navSelect');
+});
+
+$('.chartsLink').click(function()  {
+  $('.titleCharts').toggleClass('titleSelect');
+  $('.chartsLink').toggleClass('navSelect');
+});
+
+$('.settingsLink').click(function()  {
+  $('.titleSettings').toggleClass('titleSelect');
+  $('.settingsLink').toggleClass('navSelect');
+});
+
+$('.aboutLink').click(function()  {
+  $('.about').toggleClass('visible');
+  $('.titleAbout').toggleClass('titleSelect');
+  $('.aboutLink').toggleClass('navSelect');
+  document.getElementById(titleTop) = 'About';
 });
 
 var ledger = [];
