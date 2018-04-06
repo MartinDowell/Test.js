@@ -7,11 +7,11 @@ function resetSelection()  {
 };
 
 function resetNav()  {
-  $('.homeLink').removeClass('NavSelect');
-  $('.transactionsLink').removeClass('NavSelect');
-  $('.chartsLink').removeClass('NavSelect');
-  $('.settingsLink').removeClass('NavSelect');
-  $('.aboutLink').removeClass('NavSelect');
+  $('.homeLink').removeClass('navSelect');
+  $('.transactionsLink').removeClass('navSelect');
+  $('.chartsLink').removeClass('navSelect');
+  $('.settingsLink').removeClass('navSelect');
+  $('.aboutLink').removeClass('navSelect');
 };
 
 $('.homeLink').click(function()  {
