@@ -36,10 +36,10 @@ $(document).ready(function() {
     var todayMinT = jsonDoc.forecast.forecastday[0].day.mintemp_c;
     var todayCond = jsonDoc.forecast.forecastday[0].day.condition.text;
     if (todayCond.length < 20)  {
-      var todayCBr = '<br>'
+      todayCBr = '<br>'
     };
     document.getElementsByClassName('day0')[0].innerHTML = todayDay + '<br>' +
-      todayCBr + todayCond + '<br>' +
+      todayCond + todayCBr + '<br>' +
       "Max:   " + todayMaxT +' º' + 'c' + '<br>' +
       "Min:   " + todayMinT +' º' + 'c';
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     for (i = 1; i <= 5; i++)  {
       if (jsonDoc.forecast.forecastday[i].day.condition.text.length < 20)  {
-        var todayCBr = '<br>'
+        todayCBr = '<br>'
       }  else  {
           var todayCBr = ''
         };
