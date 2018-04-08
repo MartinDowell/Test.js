@@ -77,7 +77,6 @@ function sumAmount()  {
 };
 
 function deleteRow(tId) {
-  // alert(tId);
   ledger.splice((tId - 100), 1);
   sumAmount(ledger);
   genTable(ledger);
