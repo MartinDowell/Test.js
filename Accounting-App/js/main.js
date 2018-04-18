@@ -15,7 +15,11 @@ function resetNav()  {
 };
 
 function resetPages()  {
-  $('.overlay').empty();
+  $('.homePage').removeClass('visible');
+  $('.transactionsPage').removeClass('visible');
+  $('.chartsPage').removeClass('visible');
+  $('.settingsPage').removeClass('visible');
+  $('.aboutPage').removeClass('visible');
 };
 
 $('.homeLink').click(function()  {
@@ -23,7 +27,7 @@ $('.homeLink').click(function()  {
   $('.titleHome').toggleClass('titleSelect');
   resetNav();
   $('.homeLink').toggleClass('navSelect');
-  // resetPages();
+  resetPages();
   $('.homePage').toggleClass('visible');
 });
 
@@ -32,6 +36,8 @@ $('.transactionsLink').click(function()  {
   $('.titleTransactions').toggleClass('titleSelect');
   resetNav();
   $('.transactionsLink').toggleClass('navSelect');
+  resetPages();
+  $('.transactionsPage').toggleClass('visible');
 });
 
 $('.chartsLink').click(function()  {
@@ -39,6 +45,8 @@ $('.chartsLink').click(function()  {
   $('.titleCharts').toggleClass('titleSelect');
   resetNav();
   $('.chartsLink').toggleClass('navSelect');
+  resetPages();
+  $('.chartsPage').toggleClass('visible');
 });
 
 $('.settingsLink').click(function()  {
@@ -46,6 +54,8 @@ $('.settingsLink').click(function()  {
   $('.titleSettings').toggleClass('titleSelect');
   resetNav();
   $('.settingsLink').toggleClass('navSelect');
+  resetPages();
+  $('.settingsPage').toggleClass('visible');
 });
 
 $('.aboutLink').click(function()  {
@@ -53,7 +63,8 @@ $('.aboutLink').click(function()  {
   $('.titleAbout').toggleClass('titleSelect');
   resetNav();
   $('.aboutLink').toggleClass('navSelect');
-  // $('.about').toggleClass('visible');
+  resetPages();
+  $('.aboutPage').toggleClass('visible');
 });
 
 
