@@ -14,11 +14,17 @@ function resetNav()  {
   $('.aboutLink').removeClass('navSelect');
 };
 
+function resetPages()  {
+  $('.overlay').empty();
+};
+
 $('.homeLink').click(function()  {
   resetSelection();
   $('.titleHome').toggleClass('titleSelect');
   resetNav();
   $('.homeLink').toggleClass('navSelect');
+  // resetPages();
+  $('.homePage').toggleClass('visible');
 });
 
 $('.transactionsLink').click(function()  {
@@ -47,7 +53,7 @@ $('.aboutLink').click(function()  {
   $('.titleAbout').toggleClass('titleSelect');
   resetNav();
   $('.aboutLink').toggleClass('navSelect');
-  $('.about').toggleClass('visible');
+  // $('.about').toggleClass('visible');
 });
 
 
@@ -95,7 +101,7 @@ function genTable()  {
         '<td>' + parseFloat(ledger[i].amount).toFixed(2) + '</td>' +
         '<td>' + parseFloat(ledger[i].balance).toFixed(2) + '</td>' +
         // '<td>' + ledger[i].tId + '</td>' +
-        '<td>' + '<button id="' + (i+100) + '" onclick="deleteRow('+ (i+100) + ')"><img src = "icons/70 Basic Icons-all-06.svg" width=24 height=24></button>' + '</td>' +
+        '<td>' + '<button id="' + (i+100) + '" onclick="deleteRow('+ (i+100) + ')"><img src = "icons/70 Basic Icons-all-06.svg" width=20 height=20></button>' + '</td>' +
     '</tr>' + '</tbody>');
     }
 };
