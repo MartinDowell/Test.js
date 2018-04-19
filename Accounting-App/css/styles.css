@@ -164,7 +164,7 @@ table, th, td {
   width: 1000px;
   height: 675px;
   border: 2px solid green;
-  background-color: white;
+  background-color: hsl(150, 50%, 75%);
   z-index: 10;
   display: none;
   font-family: 'Roboto', sans-serif;
@@ -189,9 +189,9 @@ table, th, td {
 #chartsPage  {
   position: absolute;
   width: 1000px;
-  height: 575px;
+  height: 675px;
   border: 2px solid green;
-  background-color: #ffffffaa;
+  background-color: hsl(150, 50%, 75%);
   z-index: 10;
   display: none;
   font-family: 'Roboto', sans-serif;
@@ -204,12 +204,13 @@ table, th, td {
   width: 1000px;
   height: 675px;
   border: 2px solid green;
-  background-color: white;
+  background-color: hsl(150, 50%, 75%);
   z-index: 10;
   display: none;
   font-family: 'Roboto', sans-serif;
   font-size: 50px;
   color: black;
+  text-align: center;
 }
 
 .aboutPage  {
@@ -229,4 +230,8 @@ table, th, td {
 
 .visible {
   display: block;
+}
+
+.hide  {
+  display: none;
 }

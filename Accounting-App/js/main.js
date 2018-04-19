@@ -17,12 +17,12 @@ function resetNav()  {
 function resetPages()  {
   $('.homePage').removeClass('visible');
   $('.transactionsPage').removeClass('visible');
-  $('#chartsPage').removeClass('visible');
+  $('#chartsPage').css('display', 'none');
   $('.settingsPage').removeClass('visible');
-  $('.aboutPage').addClass('aboutPage');
+  $('.aboutPage').css('display', 'none');
 };
 
-$('.homeLink').click(function()  {
+$('.homeLink, .titleHome').click(function()  {
   resetSelection();
   $('.titleHome').toggleClass('titleSelect');
   resetNav();
@@ -31,7 +31,7 @@ $('.homeLink').click(function()  {
   $('.homePage').toggleClass('visible');
 });
 
-$('.transactionsLink').click(function()  {
+$('.transactionsLink, .titleTransactions').click(function()  {
   resetSelection();
   $('.titleTransactions').toggleClass('titleSelect');
   resetNav();
@@ -40,17 +40,17 @@ $('.transactionsLink').click(function()  {
   // $('.transactionsPage').toggleClass('visible');
 });
 
-$('.chartsLink').click(function()  {
+$('.chartsLink, .titleCharts').click(function()  {
   resetSelection();
   $('.titleCharts').toggleClass('titleSelect');
   resetNav();
   $('.chartsLink').toggleClass('navSelect');
   resetPages();
-  $('#chartsPage').toggleClass('visible');
+  $('#chartsPage').css('display', 'block');
   genCharts();
 });
 
-$('.settingsLink').click(function()  {
+$('.settingsLink, .titleSettings').click(function()  {
   resetSelection();
   $('.titleSettings').toggleClass('titleSelect');
   resetNav();
@@ -59,13 +59,13 @@ $('.settingsLink').click(function()  {
   $('.settingsPage').toggleClass('visible');
 });
 
-$('.aboutLink').click(function()  {
+$('.aboutLink, .titleAbout').click(function()  {
   resetSelection();
   $('.titleAbout').toggleClass('titleSelect');
   resetNav();
   $('.aboutLink').toggleClass('navSelect');
   resetPages();
-  $('.aboutPage').toggleClass('visible');
+  $('.aboutPage').css('display', 'block');
 });
 
 
