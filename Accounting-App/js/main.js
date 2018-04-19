@@ -17,9 +17,9 @@ function resetNav()  {
 function resetPages()  {
   $('.homePage').removeClass('visible');
   $('.transactionsPage').removeClass('visible');
-  $('.chartsPage').removeClass('visible');
+  $('#chartsPage').removeClass('visible');
   $('.settingsPage').removeClass('visible');
-  $('.aboutPage').removeClass('visible');
+  $('.aboutPage').addClass('aboutPage');
 };
 
 $('.homeLink').click(function()  {
@@ -37,7 +37,7 @@ $('.transactionsLink').click(function()  {
   resetNav();
   $('.transactionsLink').toggleClass('navSelect');
   resetPages();
-  $('.transactionsPage').toggleClass('visible');
+  // $('.transactionsPage').toggleClass('visible');
 });
 
 $('.chartsLink').click(function()  {
@@ -46,7 +46,8 @@ $('.chartsLink').click(function()  {
   resetNav();
   $('.chartsLink').toggleClass('navSelect');
   resetPages();
-  $('.chartsPage').toggleClass('visible');
+  $('#chartsPage').toggleClass('visible');
+  genCharts();
 });
 
 $('.settingsLink').click(function()  {
@@ -128,3 +129,73 @@ $('.transact').click (function()  {
   tId +=1;
 
 });
+
+
+// Chart Generation
+
+function genDate()  {
+  var dates = [];
+  for (i = 0; i < ledger.length; i++)  {
+    dates.push(ledger[i].date);
+  }
+  return dates;
+};
+
+function genBalance()  {
+  var balances = [];
+  for (i = 0; i < ledger.length; i++)  {
+    balances.push(parseFloat(ledger[i].balance).toFixed(2));
+  }
+  return balances;
+};
+
+function genCharts()  {
+  var ctx = document.getElementById('chartsPage').getContext('2d');
+  var chartsPage = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: genDate(),
+        datasets: [{
+            label: 'Balance(£)',
+            data: genBalance(),
+            fill: false,
+            backgroundColor: ['rgba(222, 77, 77, 0.25)'],
+            borderColor: ['rgba(222, 77, 77, 1)'],
+            borderWidth: 3
+            }]
+  },
+  options:{
+    scales: {
+          yAxes: [{
+              ticks: {
+                  beginAtZero:false
+              }
+          }]
+      },
+    title:{
+      display: true,
+      text: 'Balance',
+      fontSize: 25
+    },
+    legend:{
+      display: true,
+      position: 'right',
+      labels:{
+        fontColor: '#000'
+      }
+    },
+    layout:{
+      padding:{
+        left:50,
+        right:0,
+        bottom:0,
+        top:0
+      }
+    },
+    tooltips:{
+      enabled:true
+    }
+
+  }
+    });
+};
