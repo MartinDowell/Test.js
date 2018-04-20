@@ -44,6 +44,10 @@ nav  {
   padding-left: 50px;
 }
 
+.homeLink:hover, .transactionsLink:hover, .chartsLink:hover, .settingsLink:hover, .aboutLink:hover  {
+  color:#44bd32;
+}
+
 footer  {
   grid-column: 1/2;
   grid-row: 3/4;
@@ -120,6 +124,10 @@ footer  {
 
 .navSelect  {
   font-weight: bolder;
+}
+
+.titleHome:hover, .titleTransactions:hover, .titleCharts:hover, .titleSettings:hover, .titleAbout:hover  {
+  color:#4cd137;
 }
 
 table  {

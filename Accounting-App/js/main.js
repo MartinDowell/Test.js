@@ -134,10 +134,13 @@ $('.transact').click (function()  {
 // Chart Generation
 
 function genDate()  {
+  ledger.sort(dynamicSort("date"));
   var dates = [];
   for (i = 0; i < ledger.length; i++)  {
     dates.push(ledger[i].date);
   }
+  sumAmount();
+  genTable();
   return dates;
 };
 
@@ -147,6 +150,18 @@ function genBalance()  {
     balances.push(parseFloat(ledger[i].balance).toFixed(2));
   }
   return balances;
+};
+
+function dynamicSort(property)  {
+  var sortOrder = 1;
+  if(property[0] === "-") {
+        sortOrder = -1;
+        property = property.substr(1);
+    }
+    return function (a,b) {
+        var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+        return result * sortOrder;
+    }
 };
 
 function genCharts()  {
@@ -159,9 +174,10 @@ function genCharts()  {
             label: 'Balance(£)',
             data: genBalance(),
             fill: false,
-            backgroundColor: ['rgba(222, 77, 77, 0.25)'],
+            backgroundColor: ['rgba(222, 77, 77, 1)'],
             borderColor: ['rgba(222, 77, 77, 1)'],
-            borderWidth: 3
+            borderWidth: 3,
+            lineTension: 0
             }]
   },
   options:{
@@ -174,13 +190,15 @@ function genCharts()  {
       },
     title:{
       display: true,
-      text: 'Balance',
-      fontSize: 25
+      text: 'Balance Chart',
+      fontSize: 25,
+      fontColor: '#000'
     },
     legend:{
       display: true,
       position: 'right',
       labels:{
+        fontSize: 20,
         fontColor: '#000'
       }
     },
