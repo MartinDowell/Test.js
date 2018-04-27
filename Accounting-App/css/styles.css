@@ -67,6 +67,16 @@ footer  {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+.xtra  {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20%;
+  height: 100%;
+  color: black;
+  display: none;
+}
+
 .titleHome  {
   position: relative;
   top: 50px;
@@ -242,4 +252,22 @@ table, th, td {
 
 .hide  {
   display: none;
+}
+
+.chart2  {
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+.chart1  {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+
+.revDate  {
+  position: absolute;
+  top: 300px;
+  left: 100px;
 }

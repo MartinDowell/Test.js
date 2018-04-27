@@ -29,6 +29,7 @@ $('.homeLink, .titleHome').click(function()  {
   $('.homeLink').toggleClass('navSelect');
   resetPages();
   $('.homePage').toggleClass('visible');
+  $('.xtra').css('display', 'none');
 });
 
 $('.transactionsLink, .titleTransactions').click(function()  {
@@ -38,16 +39,19 @@ $('.transactionsLink, .titleTransactions').click(function()  {
   $('.transactionsLink').toggleClass('navSelect');
   resetPages();
   // $('.transactionsPage').toggleClass('visible');
+  $('.xtra').css('display', 'none');
 });
 
 $('.chartsLink, .titleCharts').click(function()  {
   resetSelection();
   $('.titleCharts').toggleClass('titleSelect');
   resetNav();
+  $('#chartsPage').empty();
   $('.chartsLink').toggleClass('navSelect');
   resetPages();
   $('#chartsPage').css('display', 'block');
   genCharts();
+  $('.xtra').css('display', 'block');
 });
 
 $('.settingsLink, .titleSettings').click(function()  {
@@ -57,6 +61,7 @@ $('.settingsLink, .titleSettings').click(function()  {
   $('.settingsLink').toggleClass('navSelect');
   resetPages();
   $('.settingsPage').toggleClass('visible');
+  $('.xtra').css('display', 'none');
 });
 
 $('.aboutLink, .titleAbout').click(function()  {
@@ -66,6 +71,12 @@ $('.aboutLink, .titleAbout').click(function()  {
   $('.aboutLink').toggleClass('navSelect');
   resetPages();
   $('.aboutPage').css('display', 'block');
+  $('.xtra').css('display', 'none');
+});
+
+$('.chart2').click(function()  {
+  $('#chartsPage').empty();
+  genChart2();
 });
 
 
@@ -164,6 +175,14 @@ function dynamicSort(property)  {
     }
 };
 
+function genAmount()  {
+  var amounts = [];
+  for (i = 0; i < ledger.length; i++)  {
+    amounts.push(parseFloat(ledger[i].amount).toFixed(2));
+  }
+  return amounts;
+};
+
 function genCharts()  {
   var ctx = document.getElementById('chartsPage').getContext('2d');
   var chartsPage = new Chart(ctx, {
@@ -191,6 +210,59 @@ function genCharts()  {
     title:{
       display: true,
       text: 'Balance Chart',
+      fontSize: 25,
+      fontColor: '#000'
+    },
+    legend:{
+      display: true,
+      position: 'right',
+      labels:{
+        fontSize: 20,
+        fontColor: '#000'
+      }
+    },
+    layout:{
+      padding:{
+        left:50,
+        right:0,
+        bottom:0,
+        top:0
+      }
+    },
+    tooltips:{
+      enabled:true
+    }
+
+  }
+    });
+};
+
+function genChart2()  {
+
+  var ctx = document.getElementById('chartsPage').getContext('2d');
+  var chartsPage = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: genDate(),
+        datasets: [{
+            label: 'Incoming/Outgoing(£)',
+            data: genAmount(),
+            backgroundColor: 'rgba(222, 77, 77, 1)',
+            borderColor: 'rgba(77, 77, 77, 1)',
+            borderWidth: 3
+            }]
+  },
+  options:{
+    scales: {
+          yAxes: [{
+              ticks: {
+                  beginAtZero:true
+              }
+          }]
+      },
+    title:{
+      display: true,
+      text: 'Incoming/Outgoing',
       fontSize: 25,
       fontColor: '#000'
     },
