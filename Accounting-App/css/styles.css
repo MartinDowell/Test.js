@@ -268,6 +268,9 @@ table, th, td {
 
 .revDate  {
   position: absolute;
-  top: 300px;
+  top: 100px;
   left: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: black;
 }
