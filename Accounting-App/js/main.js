@@ -1,3 +1,6 @@
+var pageCharts;
+var pageCharts2;
+
 function resetSelection()  {
   $('.titleHome').removeClass('titleSelect');
   $('.titleTransactions').removeClass('titleSelect');
@@ -50,6 +53,12 @@ $('.chartsLink, .titleCharts').click(function()  {
   $('.chartsLink').toggleClass('navSelect');
   resetPages();
   $('#chartsPage').css('display', 'block');
+  if (typeof pageCharts !== 'undefined')  {
+    pageCharts.destroy();
+  };
+  if (typeof pageCharts2 !== 'undefined')  {
+    pageCharts2.destroy();
+  };
   genCharts();
   $('.xtra').css('display', 'block');
 });
@@ -75,8 +84,19 @@ $('.aboutLink, .titleAbout').click(function()  {
 });
 
 $('.chart2').click(function()  {
-  $('#chartsPage').empty();
+    if (typeof pageCharts2 !== 'undefined')  {
+      pageCharts.destroy();
+      pageCharts2.destroy();
+    };
   genChart2();
+});
+
+$('.chart1').click(function()  {
+    if (typeof pageCharts !== 'undefined')  {
+      pageCharts.destroy();
+      pageCharts2.destroy();
+    };
+  genCharts();
 });
 
 
@@ -123,7 +143,6 @@ function genTable()  {
         '<td>' + ledger[i].comments + '</td>' +
         '<td>' + parseFloat(ledger[i].amount).toFixed(2) + '</td>' +
         '<td>' + parseFloat(ledger[i].balance).toFixed(2) + '</td>' +
-        // '<td>' + ledger[i].tId + '</td>' +
         '<td>' + '<button id="' + (i+100) + '" onclick="deleteRow('+ (i+100) + ')"><img src = "icons/70 Basic Icons-all-06.svg" width=20 height=20></button>' + '</td>' +
     '</tr>' + '</tbody>');
     }
@@ -131,7 +150,6 @@ function genTable()  {
 
 $('.transact').click (function()  {
   var dateVal = $('input[name = date]').val();
-  // var typeVal = $('input[name = value]').val();
   var typeVal = $('select').val();
   var commentsVal = $('input[name = comments]').val();
   var amountVal = $('input[name = amount]').val();
@@ -185,7 +203,7 @@ function genAmount()  {
 
 function genCharts()  {
   var ctx = document.getElementById('chartsPage').getContext('2d');
-  var chartsPage = new Chart(ctx, {
+  pageCharts = new Chart(ctx, {
     type: 'line',
     data: {
         labels: genDate(),
@@ -238,9 +256,8 @@ function genCharts()  {
 };
 
 function genChart2()  {
-
   var ctx = document.getElementById('chartsPage').getContext('2d');
-  var chartsPage = new Chart(ctx, {
+  pageCharts2 = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: genDate(),
