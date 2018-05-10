@@ -71,6 +71,11 @@ $('.settingsLink, .titleSettings').click(function()  {
   resetPages();
   $('.settingsPage').toggleClass('visible');
   $('.xtra').css('display', 'none');
+  if ($('checkmark').prop('checked'))  {
+    alert('its checked');
+  }  else  {
+    alert('not checked');
+  };
 });
 
 $('.aboutLink, .titleAbout').click(function()  {
