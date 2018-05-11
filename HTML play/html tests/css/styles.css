@@ -1,21 +1,7 @@
-.visible  {
-  background-color: orange;
+.qwerty  {
+  font-size: 50px;
 }
 
 .pousez  {
-  background-color: grey;
-  color: white;
-  font-size: 25px;
-  width: 100px;
-}
-
-
-.overlay  {
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  left: 10%;
-  top: 10%;
-  background-color: white;
-  border: 3px solid green;
+  font-size: 50px;
 }

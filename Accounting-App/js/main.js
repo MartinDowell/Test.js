@@ -53,12 +53,20 @@ $('.chartsLink, .titleCharts').click(function()  {
   $('.chartsLink').toggleClass('navSelect');
   resetPages();
   $('#chartsPage').css('display', 'block');
+
+  if ($('.cb').prop('checked') == true)  {
+    alert($('.cb').prop('checked'));
+  }  else  {
+    alert($('.cb').prop('checked'));
+  };
+
   if (typeof pageCharts !== 'undefined')  {
     pageCharts.destroy();
   };
   if (typeof pageCharts2 !== 'undefined')  {
     pageCharts2.destroy();
   };
+
   genCharts();
   $('.xtra').css('display', 'block');
 });
@@ -71,11 +79,6 @@ $('.settingsLink, .titleSettings').click(function()  {
   resetPages();
   $('.settingsPage').toggleClass('visible');
   $('.xtra').css('display', 'none');
-  if ($('checkmark').prop('checked'))  {
-    alert('its checked');
-  }  else  {
-    alert('not checked');
-  };
 });
 
 $('.aboutLink, .titleAbout').click(function()  {
