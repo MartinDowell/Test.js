@@ -1,3 +1,4 @@
+var sortOrder;
 var pageCharts;
 var pageCharts2;
 
@@ -55,9 +56,9 @@ $('.chartsLink, .titleCharts').click(function()  {
   $('#chartsPage').css('display', 'block');
 
   if ($('.cb').prop('checked') == true)  {
-    alert($('.cb').prop('checked'));
+    sortOrder = -1;
   }  else  {
-    alert($('.cb').prop('checked'));
+    sortOrder = 1;
   };
 
   if (typeof pageCharts !== 'undefined')  {
@@ -190,11 +191,6 @@ function genBalance()  {
 };
 
 function dynamicSort(property)  {
-  var sortOrder = 1;
-  if(property[0] === "-") {
-        sortOrder = -1;
-        property = property.substr(1);
-    }
     return function (a,b) {
         var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
         return result * sortOrder;

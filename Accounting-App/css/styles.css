@@ -298,9 +298,9 @@ table, th, td {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a green background */
 .revDate input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #20bf6b;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
