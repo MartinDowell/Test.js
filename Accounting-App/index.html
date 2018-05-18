@@ -36,11 +36,29 @@
     <span class = 'titleAbout'>About</span>
 
     <div class = 'overlay'>
-      <div class = 'homePage'>Welcome to Quick-Accounts!</div>
+      <div class = 'homePage'>
+        <h1 class = 'home2'>Welcome to Quick-Accounts!</h1>
+        <p>Quick-Accounts is a simple to use spreadsheet program. It allows you to
+          add or delete entries and see  the transaction activity displayed as charts.</p>
+        <p>Instructions for use:</p>
+        <ul>
+          <li>Enter details into the transcation form at the bottom of the screen.</li>
+          <li>Press 'add' to enter the transaction into the ledger.</li>
+          <li>Furthur transction entries will produce a runnung balance.</li>
+          <li>Entries may be deleted by pressing the cross next to the entry. The
+            running balance will be re-calculated automatically.</li>
+          <li>Selecting 'Charts' on either the side or top bars will display the balance
+            in graphical form with the dates shown chronologically.</li>
+          <li>To the right of the Charts page is a 'Show Incoming/Outgoing' button.
+            Pressing this will display a bar chart showing deposits and withdrawals vertically.</li>
+          <li>It is possible to reverse the order of the dates shown by going to the
+            Settings page and selecting 'Reverse Date Order'.</li>
+        </ul>
+      </div>
       <div class = 'transactionsPage'>transactions</div>
       <canvas id = 'chartsPage'></canvas>
       <div class = 'settingsPage'>
-        <u>Settings</u>
+        <h1>Settings</h1>
         <label class = 'revDate'>Reverse date order
           <input type = 'checkbox' class = 'cb'>
           <span class = 'checkmark'></span>
