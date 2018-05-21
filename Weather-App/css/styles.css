@@ -40,6 +40,30 @@ body  {
   padding-top: 5px;
 }
 
+#loc-form  {
+  background-color: #273c7544;
+  width: 25%;
+  height: 200px;
+  border: 5px solid #273c75;
+  border-radius: 22px;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 50px;
+  display: none;
+}
+
+#locD  {
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+}
+
+#submit  {
+  font-size: 25px;
+  position: relative;
+  top: 30px;
+}
+
 #datetime  {
   background-color: #273c7544;
   width: 25%;
@@ -47,7 +71,7 @@ body  {
   border: 5px solid #273c75;
   border-radius: 22px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 #current  {
@@ -260,4 +284,12 @@ body  {
 
 #charts:hover  {
   background-color: #0097e6;
+}
+
+#location:hover  {
+  background-color: #192a56aa;
+}
+
+#loc-form:hover  {
+  background-color: #192a56aa;
 }

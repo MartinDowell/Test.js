@@ -1,7 +1,15 @@
 $(document).ready(function() {
-
+    var locData = 'stratford upon avon';
     var xhttp = new XMLHttpRequest();
-    var url = "http://api.apixu.com/v1/forecast.json?key=ee63afa5ce654c989c6120300172106&q=cv37&days=6";
+    getJson(locData);
+
+    $('#submit').click(function()  {
+      var locData = document.getElementById('locD').value;
+      getJson(locData);
+    });
+
+  function getJson(locData)  {
+    var url = "http://api.apixu.com/v1/forecast.json?key=ee63afa5ce654c989c6120300172106&q=" + locData + ",uk&days=6";
     xhttp.onreadystatechange = function()  {
       if (this.readyState == 4 && this.status == 200)  {
         getWeather(this);
@@ -9,7 +17,7 @@ $(document).ready(function() {
     };
     xhttp.open("GET", url, false);
     xhttp.send();
-
+  };
 
   function getWeather(jsonRet)  {
     var jsonDoc = JSON.parse(jsonRet.responseText);
@@ -124,6 +132,16 @@ $('.day5').on('click', function()  {
   var d = 5;
   $('.day5').addClass('selected');
   getStats(d);
+})
+
+$('#location').on('click', function()  {
+  $('#location').css('display', 'none');
+  $('#loc-form').css('display', 'block')
+})
+
+$('#loc-form').on('click', function()  {
+  $('#location').css('display', 'block');
+  $('#loc-form').css('display', 'none')
 })
 
 

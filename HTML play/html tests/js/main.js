@@ -1,8 +1,4 @@
-$('.pousez').click (function()  {
-  if ($('.qwerty').prop('checked') == true)  {
-    alert('its checked');
-  }
-  else  {
-    alert('not checked');
-  };
+$('#submit').click(function()  {
+  var formData = document.getElementById('ft').value;
+  alert(formData);
 });
