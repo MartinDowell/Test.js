@@ -269,15 +269,15 @@ body  {
 #charts  {
   background-color: #e1b12c;
   box-shadow: 5px 10px 8px #00000088;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 100px;
   border: 3px solid #8c7ae6;
-  border-radius: 100%;
+  border-radius: 22px;
   font-family: Libre Franklin, sans-serif;
   font-size: 40px;
   color: #8c7ae6;
   text-align: center;
-  padding-top: 45px;
+  padding-top: 20px;
   position: absolute;
   right: 200px;
 }
