@@ -1,6 +1,9 @@
 $(document).ready(function() {
-
-    var locData2 = sessionStorage.getItem('page2Loc');
+  if (sessionStorage.getItem('altLoc'))  {
+    var locData2 = sessionStorage.getItem('altLoc');
+  }  else  {
+    var locData2 = 'stratford upon avon';
+  };
 
     var xhttp = new XMLHttpRequest();
     var url = "http://api.apixu.com/v1/forecast.json?key=ee63afa5ce654c989c6120300172106&q=" + locData2 + ",uk&days=6";
