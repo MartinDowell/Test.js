@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
+    var locData2 = sessionStorage.getItem('page2Loc');
+
     var xhttp = new XMLHttpRequest();
-    var url = "http://api.apixu.com/v1/forecast.json?key=ee63afa5ce654c989c6120300172106&q=cv37&days=6";
+    var url = "http://api.apixu.com/v1/forecast.json?key=ee63afa5ce654c989c6120300172106&q=" + locData2 + ",uk&days=6";
     xhttp.onreadystatechange = function()  {
       if (this.readyState == 4 && this.status == 200)  {
         getWeather(this);

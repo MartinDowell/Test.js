@@ -1,10 +1,12 @@
 $(document).ready(function() {
     var locData = 'stratford upon avon';
+
     var xhttp = new XMLHttpRequest();
     getJson(locData);
 
     $('#submit').click(function()  {
       var locData = document.getElementById('locD').value;
+      sessionStorage.setItem('page2Loc', locData); //Saves locData variable to use in page 2
       getJson(locData);
     });
 
