@@ -14,7 +14,15 @@
   width: 98%;
   margin-left: 1%;
   position: relative;
-  top: 80px;
+  top: 50px;
+}
+
+#locName  {
+  font-family: Libre Franklin, sans-serif;
+  font-size: 50px;
+  text-shadow: 5px 5px 15px black;
+  color: white;
+  text-align: center;
 }
 
 .canbox  {
@@ -54,7 +62,7 @@
   padding-top: 50px;
   position: relative;
   padding-top: 45px;
-  top: 100px;
+  top: 80px;
   left: 200px
 }
 

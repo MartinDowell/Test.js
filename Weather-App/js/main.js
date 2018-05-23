@@ -33,7 +33,7 @@ $(document).ready(function() {
       jsonDoc.current.condition.text;
     var loc = jsonDoc.location.name;
     var reg = jsonDoc.location.region;
-    document.getElementById('location').innerHTML = loc + "<br>" + reg
+    document.getElementById('location').innerHTML = loc + "<br>" + reg;
 // Retrieve the local time info and seperate into date and time
     var dateTime = jsonDoc.location.localtime;
     var date = dateTime.split(' ');
@@ -149,6 +149,10 @@ $('#location').on('click', function()  {
 $('#loc-form').on('click', function()  {
   $('#location').css('display', 'block');
   $('#loc-form').css('display', 'none')
+})
+
+$('#locD').on('click', function(){
+  event.stopPropagation();
 })
 
 

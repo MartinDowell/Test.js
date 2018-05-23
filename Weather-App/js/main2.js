@@ -1,9 +1,11 @@
 $(document).ready(function() {
+
   if (sessionStorage.getItem('altLoc'))  {
     var locData2 = sessionStorage.getItem('altLoc');
   }  else  {
     var locData2 = 'stratford upon avon';
   };
+
 
     var xhttp = new XMLHttpRequest();
     var url = "http://api.apixu.com/v1/forecast.json?key=ee63afa5ce654c989c6120300172106&q=" + locData2 + ",uk&days=6";
@@ -16,8 +18,11 @@ $(document).ready(function() {
     xhttp.send();
 
 
-  function getWeather(jsonRet)  {
-    var jsonDoc = JSON.parse(jsonRet.responseText);
+function getWeather(jsonRet)  {
+  var jsonDoc = JSON.parse(jsonRet.responseText);
+  var loc = jsonDoc.location.name;
+  var reg = jsonDoc.location.region;
+  document.getElementById('locName').innerHTML = loc + ', ' + reg;
 
 function genMaxTemp()  {
   var maxTemp = [];
