@@ -91,6 +91,20 @@ function resetBorder()  {
   };
 }
 
+$('#locD').click(function(event)  {
+  event.stopPropagation();
+})
+
+$('#location').on('click', function()  {
+  $('#location').css('display', 'none');
+  $('#loc-form').css('display', 'block')
+})
+
+$('#loc-form').on('click', function()  {
+  $('#location').css('display', 'block');
+  $('#loc-form').css('display', 'none')
+})
+
 // Get stats for each day
 
 $('.day0').on('click', function()  {
@@ -139,20 +153,6 @@ $('.day5').on('click', function()  {
   var d = 5;
   $('.day5').addClass('selected');
   getStats(d);
-})
-
-$('#location').on('click', function()  {
-  $('#location').css('display', 'none');
-  $('#loc-form').css('display', 'block')
-})
-
-$('#loc-form').on('click', function()  {
-  $('#location').css('display', 'block');
-  $('#loc-form').css('display', 'none')
-})
-
-$('#locD').on('click', function(){
-  event.stopPropagation();
 })
 
 
