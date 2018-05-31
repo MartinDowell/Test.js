@@ -3,116 +3,113 @@
 
 <title>Accounting</title>
 <meta charset='utf-8'>
+
 <head>
   <link rel='stylesheet' type='text/css' href='css/styles.css'>
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
 </head>
 
 <body>
-<div class = 'mainScr'>
+  <div class='mainScr'>
 
-  <header>
-    <p>Quick-Accounts</p>
-    <img src='icons/70 Basic Icons-all-01.svg' height='42' width='42'>
-  </header>
+    <header>
+      <p>Quick-Accounts</p>
+      <img src='icons/70 Basic Icons-all-01.svg' height='42' width='42'>
+    </header>
 
-  <nav>
+    <nav>
 
-    <p>NAVIGATION</p>
-    <br/>
-    <p class = 'homeLink'><img src='icons/70 Basic Icons-all-12.svg' height='22' width='22' hspace="20">Home</p>
-    <p class = 'transactionsLink'><img src='icons/70 Basic Icons-all-13.svg' height='22' width='22' hspace="20">Transactions</p>
-    <p class = 'chartsLink'><img src='icons/70 Basic Icons-all-57.svg' height='22' width='22' hspace="20">Charts</p>
-    <p class = 'settingsLink'><img src='icons/70 Basic Icons-all-33.svg' height='22' width='22' hspace="20">Settings</p>
-    <p class = 'aboutLink'><img src='icons/70 Basic Icons-all-11.svg' height='22' width='22' hspace="20">About</p>
-  </nav>
+      <p>NAVIGATION</p>
+      <br/>
+      <p class='homeLink'><img src='icons/70 Basic Icons-all-12.svg' height='22' width='22' hspace="20">Home</p>
+      <p class='transactionsLink'><img src='icons/70 Basic Icons-all-13.svg' height='22' width='22' hspace="20">Transactions</p>
+      <p class='chartsLink'><img src='icons/70 Basic Icons-all-57.svg' height='22' width='22' hspace="20">Charts</p>
+      <p class='settingsLink'><img src='icons/70 Basic Icons-all-33.svg' height='22' width='22' hspace="20">Settings</p>
+      <p class='aboutLink'><img src='icons/70 Basic Icons-all-11.svg' height='22' width='22' hspace="20">About</p>
+    </nav>
 
-  <div class = 'mainPage'>
+    <div class='mainPage'>
 
-    <span class = 'titleHome'>Home</span>
-    <span class = 'titleTransactions'>Transactions</span>
-    <span class = 'titleCharts'>Charts</span>
-    <span class = 'titleSettings'>Settings</span>
-    <span class = 'titleAbout'>About</span>
+      <span class='titleHome'>Home</span>
+      <span class='titleTransactions'>Transactions</span>
+      <span class='titleCharts'>Charts</span>
+      <span class='titleSettings'>Settings</span>
+      <span class='titleAbout'>About</span>
 
-    <div class = 'overlay'>
-      <div class = 'homePage'>
-        <h1 class = 'home2'>Welcome to Quick-Accounts!</h1>
-        <p>Quick-Accounts is a simple to use spreadsheet program. It allows you to
-          add or delete entries and see  the transaction activity displayed as charts.</p>
-        <p>Instructions for use:</p>
-        <ul>
-          <li>Enter details into the transaction form at the bottom of the screen.</li>
-          <li>Press 'add' to enter the transaction into the ledger.</li>
-          <li>Furthur transaction entries will produce a running balance.</li>
-          <li>Entries may be deleted by pressing the cross next to the entry. The
-            running balance will be re-calculated automatically.</li>
-          <li>Selecting 'Charts' on either the side or top bars will display the balance
-            in graphical form with the dates shown chronologically.</li>
-          <li>To the right of the Charts page is a 'Show Incoming/Outgoing' button.
-            Pressing this will display a bar chart showing deposits and withdrawals vertically.</li>
-          <li>It is possible to reverse the order of the dates shown by going to the
-            Settings page and selecting 'Reverse Date Order'.</li>
-        </ul>
-      </div>
-      <div class = 'transactionsPage'>transactions</div>
-      <canvas id = 'chartsPage'></canvas>
-      <div class = 'settingsPage'>
-        <h1>Settings</h1>
-        <label class = 'revDate'>Reverse date order
+      <div class='overlay'>
+        <div class='homePage'>
+          <h1 class='home2'>Welcome to Quick-Accounts!</h1>
+          <p>Quick-Accounts is a simple to use spreadsheet program. It allows you to add or delete entries and see the transaction activity displayed as charts.</p>
+          <p>Instructions for use:</p>
+          <ul>
+            <li>Enter details into the transaction form at the bottom of the screen.</li>
+            <li>Press 'add' to enter the transaction into the ledger.</li>
+            <li>Furthur transaction entries will produce a running balance.</li>
+            <li>Entries may be deleted by pressing the cross next to the entry. The running balance will be re-calculated automatically.</li>
+            <li>Selecting 'Charts' on either the side or top bars will display the balance in graphical form with the dates shown chronologically.</li>
+            <li>To the right of the Charts page is a 'Show Incoming/Outgoing' button. Pressing this will display a bar chart showing deposits and withdrawals vertically.</li>
+            <li>It is possible to reverse the order of the dates shown by going to the Settings page and selecting 'Reverse Date Order'.</li>
+          </ul>
+        </div>
+        <div class='transactionsPage'>transactions</div>
+        <canvas id='chartsPage'></canvas>
+        <div class='settingsPage'>
+          <h1>Settings</h1>
+          <label class='revDate'>Reverse date order
           <input type = 'checkbox' class = 'cb'>
           <span class = 'checkmark'></span>
         </label>
+        </div>
       </div>
-    </div>
 
-  <div class = 'tableContainer'>
-    <table id = 'myTable'>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Type</th>
-          <th>Comments</th>
-          <th>Amount(in £)</th>
-          <th>Balance(in £)</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
+      <div class='tableContainer'>
+        <table id='myTable'>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Comments</th>
+              <th>Amount(in £)</th>
+              <th>Balance(in £)</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
 
-    <form class = 'ss-input'>
-      Date:<input type="text" name="date" value="yyyy-mm-dd">
+      <form class='ss-input'>
+        Date:<input type="text" name="date" value="yyyy-mm-dd"> Type:
 
-      Type:<select>
+        <select>
             <option value="Incoming">Incoming</option>
             <option value="Outgoing">Outgoing</option>
-          </select>
-      Comments:<input type="text" name="comments" value="">
-      Amount:<input type="text" name="amount" value="">
-              <button type="button" class="transact">Add</button>
-    </form>
+          </select> Comments:
+        <input type="text" name="comments" value=""> Amount:
+        <input type="text" name="amount" value="">
+        <button type="button" class="transact">Add</button>
+      </form>
 
-    <div class = 'xtra'>
-      <button class = 'chart2'>Show<br/>Incoming/Outgoing</button>
-      <button class = 'chart1'>Return to balance</button>
+      <div class='xtra'>
+        <button class='chart2'>Show<br/>Incoming/Outgoing</button>
+        <button class='chart1'>Return to balance</button>
+      </div>
+
     </div>
+
+    <footer>© Martin Dowell</footer>
 
   </div>
 
-  <footer>© Martin Dowell</footer>
+  <div class='aboutPage'>
+    <p><b>QUICK-ACCOUNTS</b></p>
+    <p>by Martin Dowell</br>
+      ver 1.50</br>
+      © 2018</p>
+  </div>
 
-</div>
-
-<div class = 'aboutPage'>
-  <p><b>QUICK-ACCOUNTS</b></p>
-  <p>by Martin Dowell</br>
-  ver 1.50</br>
-  © 2018</p>
-</div>
-
-<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-<script src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
-<script src='js/main.js'></script>
+  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
+  <script src='js/main.js'></script>
 
 </body>
+
 </html>

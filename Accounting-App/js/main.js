@@ -183,11 +183,19 @@ function genDate()  {
 };
 
 function genBalance()  {
+  if (sortOrder == 1)  {
   var balances = [];
   for (i = 0; i < ledger.length; i++)  {
     balances.push(parseFloat(ledger[i].balance).toFixed(2));
   }
-  return balances;
+    return balances;
+  }  else  {
+  var balances = [];
+  for (i = 0; i < ledger.length; i++)  {
+    balances.unshift(parseFloat(ledger[i].balance).toFixed(2));
+  }
+    return balances;
+  }
 };
 
 function dynamicSort(property)  {
