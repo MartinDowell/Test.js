@@ -1,4 +1,4 @@
-var sortOrder;
+var sortOrder = 1;
 var pageCharts;
 var pageCharts2;
 
@@ -42,8 +42,15 @@ $('.transactionsLink, .titleTransactions').click(function()  {
   resetNav();
   $('.transactionsLink').toggleClass('navSelect');
   resetPages();
-  // $('.transactionsPage').toggleClass('visible');
   $('.xtra').css('display', 'none');
+
+  if ($('.cb').prop('checked') == true)  {
+    sortOrder = -1;
+  }  else  {
+    sortOrder = 1;
+  };
+genDate();
+genBalance();
 });
 
 $('.chartsLink, .titleCharts').click(function()  {
@@ -128,9 +135,16 @@ function Transaction(date, type, comments, amount, tId)  {
 
 function sumAmount()  {
   balance = 0;
-  for (i = 0; i < ledger.length; i++)  {
-    balance += parseFloat(ledger[i].amount);
-    ledger[i].balance = balance.toString();
+  if (sortOrder == 1) {
+    for (i = 0; i < ledger.length; i++) {
+      balance += parseFloat(ledger[i].amount);
+      ledger[i].balance = balance.toString();
+    }
+  } else {
+    for (i = (ledger.length - 1); i > -1; i--) {
+      balance += parseFloat(ledger[i].amount);
+      ledger[i].balance = balance.toString();
+    }
   }
 };
 
@@ -172,30 +186,22 @@ $('.transact').click (function()  {
 // Chart Generation
 
 function genDate()  {
-  ledger.sort(dynamicSort("date"));
-  var dates = [];
-  for (i = 0; i < ledger.length; i++)  {
-    dates.push(ledger[i].date);
-  }
-  sumAmount();
-  genTable();
-  return dates;
+    ledger.sort(dynamicSort("date"));
+    var dates = [];
+    for (i = 0; i < ledger.length; i++) {
+      dates.push(ledger[i].date);
+    }
+    sumAmount();
+    genTable();
+    return dates;
 };
 
 function genBalance()  {
-  if (sortOrder == 1)  {
   var balances = [];
   for (i = 0; i < ledger.length; i++)  {
     balances.push(parseFloat(ledger[i].balance).toFixed(2));
   }
     return balances;
-  }  else  {
-  var balances = [];
-  for (i = 0; i < ledger.length; i++)  {
-    balances.unshift(parseFloat(ledger[i].balance).toFixed(2));
-  }
-    return balances;
-  }
 };
 
 function dynamicSort(property)  {
