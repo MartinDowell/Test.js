@@ -1,6 +1,7 @@
 var sortOrder = 1;
 var pageCharts;
 var pageCharts2;
+$('.homePage').toggleClass('visible');
 
 function resetSelection()  {
   $('.titleHome').removeClass('titleSelect');
