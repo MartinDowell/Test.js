@@ -8,10 +8,23 @@
 
 <?php
 
-$name = $_POST['name'];
-$email = $_POST['email'];
+$comment = $_POST['comment'];
+$time = $_POST['time'];
+$user = $_POST['user'];
 
-echo "Good afternoon $name, your email is $email";
+echo "$comment $time $user<br>";
+
+if ($comment == null)  {
+  echo "You need to enter a comment<br>";
+}
+
+if ((isset($comment) == true) && (isset($time) == true) && ($user != null))  {
+  echo "<p>Comment receved: \"$comment\" <br>
+        From $user at $time</p>";
+}  else {
+  echo "Incorrect info received";
+}
+
 
 ?>
 
