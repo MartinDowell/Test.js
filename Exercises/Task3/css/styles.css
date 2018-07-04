@@ -1,0 +1,8 @@
+#numbers  {
+  font-family: arial;
+  font-size: 22px;
+  border: 3px solid black;
+  width: 90%;
+  height: 500px;
+  text-overflow: clip;
+}
