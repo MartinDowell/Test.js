@@ -1,0 +1,77 @@
+body {
+  background: #eaeaea;
+}
+
+.outerBorder  {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 170px;
+  height: 57px;
+  background: linear-gradient(#bbb, #fff);
+  border-radius: 28px;
+  z-index: -1;
+}
+
+.homeButton  {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 5px;
+  background-color: white;
+  width: 160px;
+  height: 45px;
+  font: arial;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid grey;
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.roof  {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid black;
+  left: 60px;
+  bottom: 20px;
+}
+
+.wall1 {
+  position: relative;
+  width: 6px;
+  height: 10px;
+  background-color: black;
+  left: 62px;
+  bottom: 20px;
+}
+
+.wall2 {
+  position: relative;
+  width: 6px;
+  height: 10px;
+  background-color: black;
+  left: 72px;
+  bottom: 30px;
+}
+.ceiling  {
+  position: relative;
+  width: 8px;
+  height: 4px;
+  background-color: black;
+  left: 66px;
+  bottom: 42px;
+}
+
+.homeButton:hover  {
+  background-color: orange;
+}
+
+.homeButton:active {
+  background-color: orange;
+  border: 2px solid #ddd;
+  transform: translateX(1px) translateY(1px);
+}
