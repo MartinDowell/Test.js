@@ -9,10 +9,10 @@
 <?php
 
 # Handle the submitted link data.
-if ( isset( $_GET['id'] ) ) 
+if ( isset( $_GET['id'] ) )
 {
   $id = $_GET['id'] ;
-  
+
   switch( $id )
   {
     case 1 : echo 'Cow selected<hr>' ; break ;

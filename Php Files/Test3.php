@@ -1,31 +1,17 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
+<title>PHP Tests</title>
 </head>
 <body>
 
 <?php
-
-$comment = $_POST['comment'];
-$time = $_POST['time'];
-$user = $_POST['user'];
-
-echo "$comment $time $user<br>";
-
-if ($comment == null)  {
-  echo "You need to enter a comment<br>";
+session_start();
+if (isset($_SESSION['id']))  {
+  $id = $_SESSION['id'];
+  echo "Welcome user ID #$id";
 }
-
-if ((isset($comment) == true) && (isset($time) == true) && ($user != null))  {
-  echo "<p>Comment receved: \"$comment\" <br>
-        From $user at $time</p>";
-}  else {
-  echo "Incorrect info received";
-}
-
-
 ?>
 
 </body>
