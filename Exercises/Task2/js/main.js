@@ -13,14 +13,10 @@ $('.table__button').click(function() {
       $($('table.table td')[i]).css(
         'background', $($('table.table td')[i]).attr('data-colour')
       );
-      $($('table.table td')[i]).css('text-decoration','underline');
-      $($('table.table td')[i]).css('font-weight','bold');
-      $($('table.table td')[i]).css('text-align','center');
-      $($('table.table td')[i]).addClass('is--coloured');
-      $($('table.table td')[i]).html('I am now ' + $($('table.table td')[i]).attr('data-colour'));
+      $($('table.table td')[i]).css({'text-decoration': 'underline', 'font-weight': 'bold',
+          'text-align': 'center'}).addClass('is--coloured').html('I am now ' + $($('table.table td')[i]).attr('data-colour'));
     }
 
     $('.table__button').attr('disabled', 'disabled');
-
   }
 });
