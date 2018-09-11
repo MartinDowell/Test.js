@@ -14,7 +14,7 @@ function error_handler($level, $message, $file, $line)  {
         (Check line $line in $file)";
 }
 
-$num = 101;
+$num = 11;
 
 if ($num > 100)  {
   trigger_error('Number must be less than 100', E_USER_ERROR);
