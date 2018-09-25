@@ -10,7 +10,7 @@ $page_title = 'Home';
 include('includes/header.html');
 
 echo "<h1>HOME</h1>
-      <p>You are now looged in,
+      <p>You are now logged in,
       {$_SESSION['first_name']} {$_SESSION['last_name']}
       </p>";
 
